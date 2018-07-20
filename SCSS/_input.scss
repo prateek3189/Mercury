@@ -3,6 +3,9 @@ $font-family: Open Sans,sans-serif;
 $blue-background-color: #347aad;
 $white-color: #FFFFFF;
 
+@import '_flex';
+@import '_footer';
+
 body {
     margin: 0;
     font-family: $font-family;
@@ -28,41 +31,6 @@ nav {
     padding-bottom: 2px;
 }
 
-footer {
-    /*border-style: dashed;*/
-    display: block;
-    background-color: $blue-background-color;
-    padding: 2px;
-    margin-top: 2em;
-}
-
-footer h3 {
-    color: $white-color;
-    padding-left: 5px;
-    padding-bottom: 2px;
-}
-
-footer a {
-    color: $white-color;
-    text-decoration: none;
-    padding: 2px;
-}
-
-footer ul {
-    list-style-type: none;
-    padding: 3px;
-}
-
-footer ul li {
-    padding: 3px;
-}
-
-footer button {
-    color: $white-color;
-    border-color: transparent;
-    background-color: transparent;
-    font-family: $font-family;
-}
 
 #Flight, #Car {
     display: block;
@@ -86,7 +54,7 @@ footer button {
     nav ul {
         margin-top: 0px;
         padding-left: 0px;
-        margin-left: 0px;
+            margin-left: 0px;
         list-style-type: none;
         line-height: 1.42857143;
     }
@@ -171,23 +139,6 @@ footer button {
         top: 0;
         width: 99%;
         font-size: 1em;
-    }
-
-    .flex-container {
-        display: flex;
-    }
-
-    .flex-container > div {
-        margin: 5px;
-        display: inline-block;
-        text-align: center;
-        line-height: 35px;
-        font-size: 1.1em;
-    }
-
-    .flex-container > div > span > a {
-        text-decoration: none;
-        color: $blue-background-color;
     }
 
     .offers-div {
@@ -326,23 +277,6 @@ footer button {
         top: 0;
         width: 100%;
         font-size: 1em;
-    }
-
-    .flex-container {
-        display: flex;
-    }
-
-    .flex-container div {
-        margin: 5px;
-        display: inline-block;
-        text-align: center;
-        line-height: 35px;
-        font-size: 1.1em;
-    }
-
-    .flex-container > div > span > a {
-        text-decoration: none;
-        color: $blue-background-color;
     }
 
     .offers-div {
