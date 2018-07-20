@@ -1,0 +1,16 @@
+{
+  "name": "accessiblewebdemo",
+  "version": "1.0.0",
+  "description": "Accessibility option for disabled people",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:compile": "node-sass input.scss style.css"
+  },
+  "author": "Abhay Bhosale",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.4.0",
+    "node-sass": "^4.9.2"
+  }
+}

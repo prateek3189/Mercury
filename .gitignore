@@ -1,0 +1,3 @@
+# Adding folders to be ignored by git
+node_modules/
+.vs/
