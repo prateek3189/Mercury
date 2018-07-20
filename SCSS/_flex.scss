@@ -1,0 +1,41 @@
+﻿/* Flexbox CSS */
+/* ---- FOR SMALL SCREENS ----- */
+@media screen and (max-width: 992px) {
+    .flex-container {
+        display: flex;
+    }
+
+    .flex-container > div {
+        margin: 5px;
+        display: inline-block;
+        text-align: center;
+        line-height: 35px;
+        font-size: 1.1em;
+    }
+
+    .flex-container > div > span > a {
+        text-decoration: none;
+        color: $blue-background-color;
+    }
+}
+
+/* ---- FOR LARGE SCREENS -----*/
+@media screen and (min-width: 600px) {
+    .flex-container {
+        display: flex;
+    }
+
+    .flex-container div {
+        margin: 5px;
+        display: inline-block;
+        text-align: center;
+        line-height: 35px;
+        font-size: 1.1em;
+    }
+
+    .flex-container > div > span > a {
+        text-decoration: none;
+        color: $blue-background-color;
+    }
+
+}

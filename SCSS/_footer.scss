@@ -1,0 +1,35 @@
+﻿/* Footer CSS */
+footer {
+    display: block;
+    background-color: $blue-background-color;
+    padding: 2px;
+    margin-top: 2em;
+}
+
+footer h3 {
+    color: $white-color;
+    padding-left: 5px;
+    padding-bottom: 2px;
+}
+
+footer a {
+    color: $white-color;
+    text-decoration: none;
+    padding: 2px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 3px;
+}
+
+footer ul li {
+    padding: 3px;
+}
+
+footer button {
+    color: $white-color;
+    border-color: transparent;
+    background-color: transparent;
+    font-family: $font-family;
+}
