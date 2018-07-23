@@ -1,5 +1,8 @@
 ﻿/* Footer CSS */
 footer {
+    -ms-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
     display: block;
     background-color: $blue-background-color;
     padding: 2px;
@@ -32,4 +35,19 @@ footer button {
     border-color: transparent;
     background-color: transparent;
     font-family: $font-family;
+}
+
+.footer-navigation-links-left, .footer-navigation-links-right {
+    float: left;
+    min-height: 250px;
+}
+
+.footer-navigation-links-left {
+    width: 40%;
+    background-color: $blue-background-color;
+}
+
+.footer-navigation-links-right {
+    width: 59%;
+    background-color: $blue-background-color;
 }

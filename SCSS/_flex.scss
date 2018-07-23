@@ -1,11 +1,39 @@
 ﻿/* Flexbox CSS */
+/* Flex Referred from: http://jsfiddle.net/MUrPj/14/ */
+.box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.boxHeader {
+    -ms-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.boxContent {
+    -ms-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    -webkit-box-flex: 1.0;
+}
+
+.boxFooter {
+    -ms-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+}
+
 /* ---- FOR SMALL SCREENS ----- */
 @media screen and (max-width: 992px) {
-    .flex-container {
-        display: flex;
-        justify-content: flex-start;
-    }
-
     .flex-container > div {
         margin: 5px;
         display: inline-block;
@@ -21,10 +49,6 @@
 
 /* ---- FOR LARGE SCREENS -----*/
 @media screen and (min-width: 600px) {
-    .flex-container {
-        display: flex;
-    }
-
     .flex-container div {
         margin: 5px;
         display: inline-block;
@@ -37,5 +61,4 @@
         text-decoration: none;
         color: $blue-background-color;
     }
-
 }
