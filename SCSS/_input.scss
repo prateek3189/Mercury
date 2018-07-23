@@ -1,15 +1,21 @@
-﻿$grey-color: #5e5e5e;
-$font-family: Open Sans,sans-serif;
-$blue-background-color: #347aad;
-$white-color: #FFFFFF;
+﻿$greyColor: #5e5e5e;
+$fontFamily: Open Sans,sans-serif;
+$blueColor: #347aad;
+$whiteColor: #FFFFFF;
+$blackColor: #000000;
 
 @import '_flex';
+@import '_header';
 @import '_footer';
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
 
 body {
     margin: 0;
-    font-family: $font-family;
-    color: $grey-color;
+    fontFamily: $fontFamily;
+    color: $greyColor;
 }
 
 .visually-hidden, .radio-toggle input[type='radio'] {
@@ -23,127 +29,25 @@ body {
     width: 1px;
 }
 
-nav {
-    text-align: left;
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-#main {
-    padding-bottom: 2px;
-}
-
-
-#Flight, #Car {
+#Flight, #Car, #Hotel, #Activity {
     display: block;
-    background-color: $blue-background-color;
+    background-color: $blueColor;
     padding: 10px;
     height: 200px;
-    color: $white-color;
-}
-
-#Hotel, #Activity {
-    display: block;
-    background-color: $blue-background-color;
-    padding: 50px;
-    font-size: 30px;
-    height: 200px;
-    color: $white-color;
+    color: $whiteColor;
 }
 
 /* ---- FOR SMALL SCREENS ----- */
 @media screen and (max-width: 992px) {
-    nav ul {
-        margin-top: 0px;
-        padding-left: 0px;
-            margin-left: 0px;
-        list-style-type: none;
-        line-height: 1.42857143;
-    }
-
-    nav ul li {
-        display: inline-block;
-        margin: 1px;
-        padding: 2px;
-        font-size: 18px;
-        background-color: $white-color;
-        width: 100%;
-        vertical-align: top;
-    }
-
-    nav ul li ul {
-        display: none;
-        margin: 5px;
-        font-size: 18px;
-    }
-
-    nav > ul > li > a:focus {
-        background-color: transparent;
-        border: 1px solid black;
-    }
-
-    nav ul li a, nav ul li ul li a {
-        color: $blue-background-color;
-        text-decoration: none;
-    }
-
-    .header-branding, .header-member-info, #rightcolumn {
-        float: left;
-    }
-
-    .header-branding {
-        width: 100%;
-    }
-
-    .header-member-info {
-        width: 100%;
-        height: 100px;
-        padding-right: 6px;
-    }
-
-    .header-member-info-content {
-        height: 50%;
-        margin-top: 2px;
-    }
-
-    .header-member-info-content span {
-        float: left;
-        padding-left: 5px;
-    }
-
-    .member-navigation {
-        float: left;
-        height: 50%
-    }
-
-    .member-navigation ul li {
-        list-style-type: none;
-        display: inline-block;
-        padding-right: 4px;
-    }
-
-    .member-navigation ul li a {
-        text-decoration: none;
-        color: $blue-background-color;
-        font-size: .85em;
-    }
-
-    #rightcolumn {
-        width: 100%;
-    }
-
-    .header-itinerary {
-        text-align: left;
-        padding: 0;
-        border: 0;
-        height: 40px;
-        position: relative;
-        top: 0;
-        width: 99%;
-        font-size: 1em;
-    }
-
     .offers-div {
         padding-top: 2rem;
-        padding-bottom: 5rem;
     }
 
     .banner {
@@ -185,108 +89,13 @@ nav {
 
 /* ---- FOR LARGE SCREENS -----*/
 @media screen and (min-width: 600px) {
-    nav ul {
-        margin-top: 0px;
-        padding-left: 0px;
-        margin-left: 0px;
-        list-style-type: none;
-        line-height: 1.42857143;
-    }
-
-    nav ul li {
-        display: inline-block;
-        margin: 1px;
-        padding: 2px;
-        font-size: 18px;
-        background-color: $white-color;
-        vertical-align: top;
-    }
-
-    nav > ul > li > a:focus {
-        background-color: transparent;
-        border: 1px solid $blue-background-color;
-    }
-
-    nav ul li ul {
-        display: none;
-        margin: 5px;
-        font-size: 18px;
-    }
-
-    nav ul li a, nav ul li ul li a {
-        color: $blue-background-color;
-        text-decoration: none;
-    }
-
-    .header-branding, .header-member-info, #rightcolumn {
-        border-bottom: 1px solid black;
-        float: left;
-        min-height: 90px;
-    }
-
-    .header-branding {
-        width: 29%;
-    }
-
-    .header-member-info {
-        width: 60%;
-        height: 90px;
-        padding-right: 6px;
-    }
-
-    .header-member-info-content {
-        height: 50%;
-        margin-top: 2px;
-    }
-
-    .header-member-info-content span {
-        float: right;
-    }
-
-    .member-navigation {
-        float: right;
-        height: 50%
-    }
-
-    .member-navigation ul li {
-        list-style-type: none;
-        display: inline-block;
-        padding-right: 4px;
-    }
-
-    .member-navigation ul li a {
-        text-decoration: none;
-        color: $blue-background-color;
-        font-size: .85em;
-    }
-
-    #rightcolumn {
-        width: 10%;
-    }
-
-    .header-itinerary {
-        text-align: center;
-        background-color: $blue-background-color;
-        color: #fff;
-        line-height: 5rem;
-        padding: 0;
-        padding-left: 3%;
-        padding-right: 2%;
-        border: 0;
-        height: 90px;
-        position: relative;
-        top: 0;
-        width: 100%;
-        font-size: 1em;
-    }
-
     .offers-div {
         padding-top: 2rem;
-        padding-bottom: 5rem;
+        height: 700px;
     }
 
     .banner {
-        width: 60%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -297,7 +106,7 @@ nav {
     .text {
         position: relative;
         float: left;
-        padding-left: 2.5em;
+        padding-left: 1.5em;
         vertical-align: middle;
         width: 80%;
     }
@@ -334,7 +143,7 @@ a.skip-main {
 
 a.skip-main:focus, a.skip-main:active {
     color: #fff;
-    background-color: $blue-background-color;
+    background-color: $blueColor;
     left: auto;
     top: auto;
     width: 20%;
@@ -346,25 +155,4 @@ a.skip-main:focus, a.skip-main:active {
     text-align: center;
     font-size: 1.2em;
     z-index: 999;
-}
-
-#wrapper {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.footer-navigation-links-left, .footer-navigation-links-right {
-    border: 1px solid $white-color;
-    float: left;
-    min-height: 250px;
-}
-
-.footer-navigation-links-left {
-    width: 40%;
-    background-color: $blue-background-color;
-}
-
-.footer-navigation-links-right {
-    width: 59%;
-    background-color: $blue-background-color;
 }

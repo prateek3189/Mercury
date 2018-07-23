@@ -1,22 +1,22 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>  
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     </script>
     <![endif]-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-        <a href="#main" class="skip-main">Skip to main content</a>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="wrapper">
-        <header>
+    <div class="box wrapper">
+        <a href="#main" class="skip-main">Skip to main content</a>
+        <header class="boxHeader">
             <div class="header-branding">
                 <a href="./abc.html" title="Return To Home">
                     <h1>Mercury Logo</h1>
@@ -29,10 +29,10 @@
                 </div>
                 <div class="member-navigation">
                     <ul>
-                        <li><a href="javascript:void(0)">Rewards Home</a></li>
-                        <li><a href="javascript:void(0)">Profile</a></li>
-                        <li><a href="javascript:void(0)">My Trips</a></li>
-                        <li><a href="javascript:void(0)" class="js-sign-out">Sign Out</a></li>
+                        <li><a href="#">Rewards Home</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">My Trips</a></li>
+                        <li><a href="#" class="js-sign-out">Sign Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,147 +42,130 @@
                     My Itinerary
                 </button>
             </div>
-            <nav id="navbar" role="navigation" aria-label="main navigation">
-                <ul style="padding-top: 0px;">
-                    <li><a href="#Flight" onclick="showHideDiv(this.innerHTML)">Flight</a></li>
-                    <li><a href="#Hotel" onclick="showHideDiv(this.innerHTML)">Hotel</a></li>
-                    <li><a href="#Car" onclick="showHideDiv(this.innerHTML)">Cars</a></li>
-                    <li><a href="#Activity" onclick="showHideDiv(this.innerHTML)">Activities</a></li>
-                    <li><a href="#">Cruise Specials</a></li>
-                    <li><a href="#Deals">Deals</a></li>
-                </ul>
-            </nav>
+            <div class="boxHeader">
+                <nav id="navbar" role="navigation" aria-label="main navigation">
+                    <ul style="padding-top: 0px;">
+                        <li><a href="#Flight" onclick="showHideDiv(this.innerHTML)">Flight</a></li>
+                        <li><a href="#Hotel" onclick="showHideDiv(this.innerHTML)">Hotel</a></li>
+                        <li><a href="#Car" onclick="showHideDiv(this.innerHTML)">Cars</a></li>
+                        <li><a href="#Activity" onclick="showHideDiv(this.innerHTML)">Activities</a></li>
+                        <li><a href="#">Cruise Specials</a></li>
+                        <li><a href="#Deals">Deals</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
+        <div class="boxContent box">
 
-        <div class="offers-div" data-ad-sct="0">
-            <div class="banner">
-                <div class="marketing-text-banner" aria-labelledby="offers-heading">
-                    <div class="text">
-                        <h2 id="offers-heading">Spread your wings and discover new destinations!</h2>
-                    </div>
-                    <div class="cta">
-                        <button class="btn-link" aria-label="View Offers">
-                            <a href="#Deals">View Offers</a>
-                        </button>
+            <div class="offers-div">
+                <div class="banner">
+                    <div class="marketing-text-banner" aria-labelledby="offers-heading">
+                        <div class="text">
+                            <h2 id="offers-heading">Spread your wings and discover new destinations!</h2>
+                        </div>
+                        <div class="cta">
+                            <button class="btn-link" aria-label="View Offers">
+                                <a href="#Deals">View Offers</a>
+                            </button>
+                        </div>
+
+                        <div class="flex-container">
+                            <div class="nav-option">
+                                <span>
+                                    <a href="#Flight" onclick="showHideDiv(this.innerHTML)">Flight</a>
+                                </span>
+                            </div>
+                            <div class="nav-option">
+                                <span>
+                                    <a href="#Hotel" onclick="showHideDiv(this.innerHTML)">Hotel</a>
+                                </span>
+                            </div>
+                            <div class="nav-option">
+                                <span>
+                                    <a href="#Car" onclick="showHideDiv(this.innerHTML)">Cars</a>
+                                </span>
+                            </div>
+                            <div class="nav-option">
+                                <span>
+                                    <a href="#Activity" onclick="showHideDiv(this.innerHTML)">Activities</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="main" role="main">
+                            <section id="Flight">
+                                <span>
+                                    Search for Flights
+                                </span>
+                            </section>
+                            <section id="Hotel">
+                                <span>
+                                    My Hotel Element
+                                </span>
+                            </section>
+                            <section id="Car">
+                                My Cars Element
+                            </section>
+                            <section id="Activity">
+                                <span>
+                                    My Activities Element
+                                </span>
+                            </section>
+                            <section id="Deals">
+                                <span>
+                                    My Deals
+                                </span>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex-container">
-            <div class="nav-option">
-                <span>
-                    <a href="#Flight" onclick="showHideDiv(this.innerHTML)">Flight</a>
-                </span>
+        <footer class="footer">
+            <div role="navigation" aria-label="Main Navigation List" class="footer-navigation-links-left">
+                <h3>Main Navigation</h3>
+                <ul id="js-footer-nav-container">
+                    <li>
+                        <a data-key="flight" href="#Flight" class="js-footer-nav" onclick="showHideDiv('Flight')">
+                            Flights
+                        </a>
+                    </li>
+                    <li>
+                        <a data-key="hotel" href="#Hotel" class="js-footer-nav" onclick="showHideDiv('Hotel')">
+                            Hotels
+                        </a>
+                    </li>
+                    <li>
+                        <a data-key="car" href="#Car" class="js-footer-nav" onclick="showHideDiv(this.innerHTML)">Cars</a>
+                    </li>
+                    <li>
+                        <a data-key="activity" href="#Activity" class="js-footer-nav" onclick="showHideDiv(this.innerHTML)">Activities</a>
+                    </li>
+                    <li>
+                        <a data-key="cruise" href="#" class="js-footer-nav" data-qaid="Link_cruise">
+                            Cruises
+                        </a>
+                    </li>
+                    <li>
+                        <a data-key="deals" href="#Deals" class="js-footer-nav" data-qaid="Link_deals">
+                            Deals
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="nav-option">
-                <span>
-                    <a href="#Hotel" onclick="showHideDiv(this.innerHTML)">Hotel</a>
-                </span>
+            <div role="navigation" aria-label="Other Links List" class="footer-navigation-links-right">
+                <h3>Other Links</h3>
+                <ul>
+                    <li><button data-content="faq" data-display="panel" class="js-other-links btn-link" data-qaid="Link_FAQs" type="button">Frequently Asked Questions</button></li>
+                    <li><button data-content="selleroftravel" data-display="panel" class="js-other-links btn-link" data-qaid="Link_SellerOfTravel" type="button">Seller of Travel</button></li>
+                    <li><button data-content="websiteterms" data-display="panel" class="js-other-links btn-link" data-qaid="Link_WebsiteTerms" type="button">Website Terms of Use</button></li>
+                    <li><button data-content="travelterms" data-display="panel" class="js-other-links btn-link" data-qaid="Link_TravelTerms" type="button">Travel Terms &amp; Conditions</button></li>
+                    <li><button data-content="privacypolicy" data-display="panel" class="js-other-links btn-link" data-qaid="Link_PrivacyPolicy" type="button">Privacy Policy</button></li>
+                </ul>
             </div>
-            <div class="nav-option">
-                <span>
-                    <a href="#Car" onclick="showHideDiv(this.innerHTML)">Cars</a>
-                </span>
-            </div>
-            <div class="nav-option">
-                <span>
-                    <a href="#Activity" onclick="showHideDiv(this.innerHTML)">Activities</a>
-                </span>
-            </div>
-        </div>
-
-        <div id="main" role="main">
-            <section id="Flight">
-                <span>
-                    Search for Flights
-                </span>
-                <!--<div class="three-btn-div">
-                    <button>
-                        Round Trip
-                    </button>
-                    <button>
-                        One Way
-                    </button>
-                    <button>
-                        Multiple Destination
-                    </button>
-                </div>-->
-                <!--<div class="flights-form">
-                    <form action="/users" method="post">
-                        <div style="margin:0;padding:0">
-                            <div align="left">
-                                <label for="username">Departure City</label><br />
-                                <input id="user_first_name" name="user[first_name]" size="30" type="text" />
-                            </div>
-                            <div align="left">
-                                <label for="name">Destination City</label><br />
-                                <input id="user_last_name" name="user[last_name]" size="30" type="text" />
-                            </div>
-                        </div>
-                     </form>
-                </div>-->
-            </section>
-            <section id="Hotel">
-                My Hotel Element
-            </section>
-            <section id="Car">
-                My Cars Element
-            </section>
-            <section id="Activity">
-                My Activities Element
-            </section>
-            <section id="Deals">
-                My Deals
-            </section>
-        </div>
+        </footer>
 
     </div>
-
-    <footer class="footer">
-        <div role="navigation" aria-label="Main Navigation List" class="footer-navigation-links-left">
-            <h3>Main Navigation</h3>
-            <ul id="js-footer-nav-container">
-                <li>
-                    <a data-key="flight" href="#Flight" class="js-footer-nav" onclick="showHideDiv('Flight')">
-                        Flights
-                    </a>
-                </li>
-                <li>
-                    <a data-key="hotel" href="#Hotel" class="js-footer-nav" onclick="showHideDiv('Hotel')">
-                        Hotels
-                    </a>
-                </li>
-                <li>
-                    <a data-key="car" href="#Car" class="js-footer-nav" onclick="showHideDiv(this.innerHTML)">Cars</a>
-                </li>
-                <li>
-                    <a data-key="activity" href="#Activity" class="js-footer-nav" onclick="showHideDiv(this.innerHTML)">Activities</a>
-                </li>
-                <li>
-                    <a data-key="cruise" href="#" class="js-footer-nav" data-qaid="Link_cruise">
-                        Cruises
-                    </a>
-                </li>
-                <li>
-                    <a data-key="deals" href="#Deals" class="js-footer-nav" data-qaid="Link_deals">
-                        Deals
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div role="navigation" aria-label="Other Links List" class="footer-navigation-links-right">
-            <h3>Other Links</h3>
-            <ul>
-                <li><button data-content="faq" data-display="panel" class="js-other-links btn-link" data-qaid="Link_FAQs" type="button">Frequently Asked Questions</button></li>
-                <li><button data-content="selleroftravel" data-display="panel" class="js-other-links btn-link" data-qaid="Link_SellerOfTravel" type="button">Seller of Travel</button></li>
-                <li><button data-content="websiteterms" data-display="panel" class="js-other-links btn-link" data-qaid="Link_WebsiteTerms" type="button">Website Terms of Use</button></li>
-                <li><button data-content="travelterms" data-display="panel" class="js-other-links btn-link" data-qaid="Link_TravelTerms" type="button">Travel Terms &amp; Conditions</button></li>
-                <li><button data-content="privacypolicy" data-display="panel" class="js-other-links btn-link" data-qaid="Link_PrivacyPolicy" type="button">Privacy Policy</button></li>
-            </ul>
-        </div>
-    </footer>
-
     <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
