@@ -2,11 +2,11 @@
 /* ---- FOR SMALL SCREENS ----- */
 @media screen and (max-width: 992px) {
   .flex-container {
-    display: flex; }
+    display: flex;
+    justify-content: flex-start; }
   .flex-container > div {
     margin: 5px;
     display: inline-block;
-    text-align: center;
     line-height: 35px;
     font-size: 1.1em; }
   .flex-container > div > span > a {
@@ -156,7 +156,8 @@ nav {
     width: 99%;
     font-size: 1em; }
   .offers-div {
-    padding-top: 2rem; }
+    padding-top: 2rem;
+    padding-bottom: 5rem; }
   .banner {
     width: 100%;
     margin: 0 auto; }
@@ -250,7 +251,8 @@ nav {
     width: 100%;
     font-size: 1em; }
   .offers-div {
-    padding-top: 2rem; }
+    padding-top: 2rem;
+    padding-bottom: 5rem; }
   .banner {
     width: 60%;
     margin: 0 auto; }

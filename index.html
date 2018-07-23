@@ -29,10 +29,10 @@
                 </div>
                 <div class="member-navigation">
                     <ul>
-                        <li><a href="https://t1-www.cxtrvl.com/BaseResponsive" data-qaid="Link_RewardsHome">Rewards Home</a></li>|
-                        <li><a href="https://t1-www.cxtrvl.com/BaseResponsive/MyProfile" data-qaid="Link_MyProfile">Profile</a></li>|
-                        <li><a href="https://t1-www.cxtrvl.com/BaseResponsive/MyTrips" data-qaid="Link_MyTrips">My Trips</a></li>|
-                        <li><a href="#" class="js-sign-out" data-qaid="Link_SignOut">Sign Out</a></li>
+                        <li><a href="javascript:void(0)">Rewards Home</a></li>
+                        <li><a href="javascript:void(0)">Profile</a></li>
+                        <li><a href="javascript:void(0)">My Trips</a></li>
+                        <li><a href="javascript:void(0)" class="js-sign-out">Sign Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                     My Itinerary
                 </button>
             </div>
-            <nav id="navbar" role="navigation">
+            <nav id="navbar" role="navigation" aria-label="main navigation">
                 <ul style="padding-top: 0px;">
                     <li><a href="#Flight" onclick="showHideDiv(this.innerHTML)">Flight</a></li>
                     <li><a href="#Hotel" onclick="showHideDiv(this.innerHTML)">Hotel</a></li>
@@ -56,20 +56,18 @@
 
         <div class="offers-div" data-ad-sct="0">
             <div class="banner">
-                <div class="marketing-text-banner">
+                <div class="marketing-text-banner" aria-labelledby="offers-heading">
                     <div class="text">
-                        <h2>Spread your wings and discover new destinations!</h2>
+                        <h2 id="offers-heading">Spread your wings and discover new destinations!</h2>
                     </div>
                     <div class="cta">
-                        <button class="btn-link" aria-labelledby="View Offers">
+                        <button class="btn-link" aria-label="View Offers">
                             <a href="#Deals">View Offers</a>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <br /><br />
-        <br /><br />
 
         <div class="flex-container">
             <div class="nav-option">

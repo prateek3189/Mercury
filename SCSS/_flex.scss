@@ -3,12 +3,12 @@
 @media screen and (max-width: 992px) {
     .flex-container {
         display: flex;
+        justify-content: flex-start;
     }
 
     .flex-container > div {
         margin: 5px;
         display: inline-block;
-        text-align: center;
         line-height: 35px;
         font-size: 1.1em;
     }
