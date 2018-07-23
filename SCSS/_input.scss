@@ -1,7 +1,8 @@
-﻿$grey-color: #5e5e5e;
-$font-family: Open Sans,sans-serif;
-$blue-background-color: #347aad;
-$white-color: #FFFFFF;
+﻿$greyColor: #5e5e5e;
+$fontFamily: Open Sans,sans-serif;
+$blueColor: #347aad;
+$whiteColor: #FFFFFF;
+$blackColor: #000000;
 
 @import '_flex';
 @import '_header';
@@ -13,8 +14,8 @@ a:-webkit-any-link {
 
 body {
     margin: 0;
-    font-family: $font-family;
-    color: $grey-color;
+    fontFamily: $fontFamily;
+    color: $greyColor;
 }
 
 .visually-hidden, .radio-toggle input[type='radio'] {
@@ -37,10 +38,10 @@ body {
 
 #Flight, #Car, #Hotel, #Activity {
     display: block;
-    background-color: $blue-background-color;
+    background-color: $blueColor;
     padding: 10px;
     height: 200px;
-    color: $white-color;
+    color: $whiteColor;
 }
 
 /* ---- FOR SMALL SCREENS ----- */
@@ -142,7 +143,7 @@ a.skip-main {
 
 a.skip-main:focus, a.skip-main:active {
     color: #fff;
-    background-color: $blue-background-color;
+    background-color: $blueColor;
     left: auto;
     top: auto;
     width: 20%;

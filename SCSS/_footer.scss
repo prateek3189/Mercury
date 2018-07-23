@@ -4,7 +4,7 @@ footer {
     -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
     display: flex;
-    background-color: $blue-background-color;
+    background-color: $blueColor;
     padding: 2px;
     margin-top: 2em;
 }
@@ -15,13 +15,13 @@ footer > div {
 }
 
 footer h3 {
-    color: $white-color;
+    color: $whiteColor;
     padding-left: 5px;
     padding-bottom: 2px;
 }
 
 footer a {
-    color: $white-color;
+    color: $whiteColor;
     text-decoration: none;
     padding: 2px;
 }
@@ -36,10 +36,10 @@ footer ul li {
 }
 
 footer button {
-    color: $white-color;
+    color: $whiteColor;
     border-color: transparent;
     background-color: transparent;
-    font-family: $font-family;
+    fontFamily: $fontFamily;
 }
 
 .footer-navigation-links-left, .footer-navigation-links-right {
@@ -49,10 +49,10 @@ footer button {
 
 .footer-navigation-links-left {
     width: 40%;
-    background-color: $blue-background-color;
+    background-color: $blueColor;
 }
 
 .footer-navigation-links-right {
     width: 59%;
-    background-color: $blue-background-color;
+    background-color: $blueColor;
 }
