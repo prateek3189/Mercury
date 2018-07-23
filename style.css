@@ -1,31 +1,16 @@
 /* Flexbox CSS */
 /* Flex Referred from: http://jsfiddle.net/MUrPj/14/ */
 .box {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
   flex-direction: column; }
 
 .boxHeader {
-  -ms-flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
   flex: 0 0 auto; }
 
 .boxContent {
-  -ms-flex: 1 0 auto;
-  -webkit-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-box-flex: 1.0; }
+  flex: 1 0 auto; }
 
 .boxFooter {
-  -ms-flex: 0 1 auto;
-  -webkit-flex: 0 1 auto;
   flex: 0 1 auto; }
 
 /* ---- FOR SMALL SCREENS ----- */
@@ -53,12 +38,12 @@
 
 /* Navbar CSS */
 nav {
-  text-align: left; }
+  justify-content: flex-start; }
 
 /* ---- FOR SMALL SCREENS ----- */
 @media screen and (max-width: 992px) {
   .header-branding, .header-member-info, #rightcolumn {
-    float: left; }
+    justify-content: flex-start; }
   .header-branding {
     width: 100%; }
   .header-member-info {
@@ -69,7 +54,7 @@ nav {
     height: 50%;
     margin-top: 2px; }
   .header-member-info-content span {
-    float: left;
+    justify-content: flex-start;
     padding-left: 5px; }
   .member-navigation {
     float: left;
@@ -99,7 +84,7 @@ nav {
     padding-left: 0px;
     margin-left: 0px;
     list-style-type: none;
-    line-height: 1.42857143; }
+    line-height: 1.5; }
   nav ul li {
     display: inline-block;
     margin: 1px;
@@ -192,10 +177,14 @@ footer {
   -ms-flex: 0 1 auto;
   -webkit-flex: 0 1 auto;
   flex: 0 1 auto;
-  display: block;
+  display: flex;
   background-color: #347aad;
   padding: 2px;
   margin-top: 2em; }
+
+footer > div {
+  justify-content: flex-start;
+  flex-wrap: nowrap; }
 
 footer h3 {
   color: #FFFFFF;

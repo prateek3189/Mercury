@@ -3,10 +3,15 @@ footer {
     -ms-flex: 0 1 auto;
     -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
-    display: block;
+    display: flex;
     background-color: $blue-background-color;
     padding: 2px;
     margin-top: 2em;
+}
+
+footer > div {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
 }
 
 footer h3 {

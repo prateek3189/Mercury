@@ -1,12 +1,12 @@
 ﻿/* Navbar CSS */
 nav {
-    text-align: left;
+    justify-content: flex-start;
 }
 
 /* ---- FOR SMALL SCREENS ----- */
 @media screen and (max-width: 992px) {
     .header-branding, .header-member-info, #rightcolumn {
-        float: left;
+        justify-content: flex-start;
     }
 
     .header-branding {
@@ -25,7 +25,7 @@ nav {
     }
 
     .header-member-info-content span {
-        float: left;
+        justify-content: flex-start;
         padding-left: 5px;
     }
 
@@ -67,7 +67,7 @@ nav {
         padding-left: 0px;
         margin-left: 0px;
         list-style-type: none;
-        line-height: 1.42857143;
+        line-height: 1.5;
     }
 
     nav ul li {

@@ -1,34 +1,19 @@
 ﻿/* Flexbox CSS */
 /* Flex Referred from: http://jsfiddle.net/MUrPj/14/ */
 .box {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
     flex-direction: column;
 }
 
 .boxHeader {
-    -ms-flex: 0 0 auto;
-    -webkit-flex: 0 0 auto;
     flex: 0 0 auto;
 }
 
 .boxContent {
-    -ms-flex: 1 0 auto;
-    -webkit-flex: 1 0 auto;
     flex: 1 0 auto;
-    -webkit-box-flex: 1.0;
 }
 
 .boxFooter {
-    -ms-flex: 0 1 auto;
-    -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
 }
 

@@ -3,6 +3,21 @@
 
 ### This project is aimed to provide accessibility throughout webpage for people with disabilities.
 
+<<<<<<< HEAD
+=======
+## How to run application
+### install http-server globally in your github repos
+npm install http-server -g
+
+### got to your project directory and run below command
+http-server -p <port number>
+### eg.
+http-server -p 5005
+	
+and your application will run on
+http://localhost:5005/
+
+>>>>>>> ecbcae681c25ac4293327de212bf5b4a8f71db5d
 ## Dependencies
 
 Make sure you have the following software and packages installed before testing:
@@ -37,6 +52,11 @@ Make sure you have the following software and packages installed before testing:
 
 ## What's Pending?
 
+<<<<<<< HEAD
 - Phone Compatibility for complete Navbar Menu and few other divisions
 - More lucid experience w.r.t. Accessibility
 - Drop-Down Menu in Skip-Link region to directly jump to some division
+=======
+- Phone Compatibility for complete webpage w.r.t Navbar Menu and other divisions
+- More lucid experience w.r.t. Accessibility
+>>>>>>> ecbcae681c25ac4293327de212bf5b4a8f71db5d
