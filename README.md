@@ -3,6 +3,17 @@
 
 ### This project is aimed to provide accessibility throughout webpage for people with disabilities.
 
+## How to run application
+install http-server globally in your github repos
+npm install http-server -g
+
+got to your project directory and run below command
+http-server -p <port number>
+eg.
+http-server -p 5005
+	
+and your application will run on
+http://localhost:5005/
 
 ## Dependencies
 
