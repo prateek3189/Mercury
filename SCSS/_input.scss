@@ -9,7 +9,7 @@ $blackColor: #000000;
 @import '_deals';
 @import '_footer';
 
-a:-webkit-any-link {
+a {
     text-decoration: none;
 }
 

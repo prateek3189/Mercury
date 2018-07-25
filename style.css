@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column; }
 
-.boxHeader {
+.box-header {
   flex: 0 0 auto; }
 
 .boxContent {
@@ -398,7 +398,7 @@ footer button {
   width: 59%;
   background-color: #347aad; }
 
-a:-webkit-any-link {
+a {
   text-decoration: none; }
 
 body {
