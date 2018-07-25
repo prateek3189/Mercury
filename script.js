@@ -1,61 +1,28 @@
 $(document).ready(function () {
+    // Hide all divs present in `parent`
+    $('#parent div').hide();
 
-    // add a click handler to all links
-    // that point to same-page targets (href="#...")		
-    //$("a[href^='#']").click(function () {
-    //    $("#" + $(this).attr("href").slice(1) + "").focus().effect("highlight", {}, 3000);            
-    //});
-
-    $("#Flight").show();
-    $("#Hotel").hide();
-    $("#Car").hide();            
-    $("#Activity").hide();            
+    // Show only default div
+    var activate = $('.active').data('target');
+    $("#" + activate).show();
 });
 
-function changeThis() {
-    event.preventDefault();
-    var list = document.querySelectorAll('nav ul li ul')[0];
-    console.log(list.innerHTML);
-    if (list.style.display === "none") {
-        list.style.display = "block";
-    } else {
-        list.style.display = "none";
-    }
-}
+$('#navbar a, .tabular-nav a, #js-footer-nav-container a').on("click", function (e) {
+    // Prevent default events firing
+    e.preventDefault();
 
-function showHideDiv(val) {
-    event.preventDefault(val);
-    console.log(val);
-    switch (val) {
-        case "Flight":
-            $("#Flight").show();
-            $("#Hotel").hide();
-            $("#Car").hide();
-            $("#Activity").hide();
-            break;
-        case "Hotel":
-            $("#Flight").hide();
-            $("#Hotel").show();
-            $("#Car").hide();
-            $("#Activity").hide();
-            break;
-        case "Cars":
-            $("#Flight").hide();
-            $("#Hotel").hide();
-            $("#Car").show();
-            $("#Activity").hide();
-            break;
-        case "Activities":
-            $("#Flight").hide();
-            $("#Hotel").hide();
-            $("#Car").hide();
-            $("#Activity").show();
-            break;
-        default:
-            $("#Flight").hide();
-            $("#Hotel").hide();
-            $("#Car").hide();
-            $("#Activity").hide();
-            break;                    
-    }
-}
+    // Read attribute value of clicked link
+    var target = $(e.target).data('target');
+    var targetArea = $(e.target).parents('#navbar, .tabular-nav, #js-footer-nav-container').data('targetarea');
+
+    // Hide all divisions from parent division first
+    $('#' + targetArea + ' div').hide();
+    $(e.target).parents('#navbar, .tabular-nav').find('.active').removeClass('active');
+
+    // Show desired division from parent division
+    $('#' + target).show();
+    $('#' + target).focus();
+
+    // Mark the selected navbar option as `active`
+    $(e.target).addClass('active');
+});
