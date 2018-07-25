@@ -1,19 +1,19 @@
 $(document).ready(function () {
     // Hide all divs present in `parent`
-    $('#parent div').hide();
+    $('.tabular-form div').hide();
 
     // Show only default div
     var activate = $('.active').data('target');
     $("#" + activate).show();
 });
 
-$('#navbar a, .tabular-nav a, #js-footer-nav-container a').on("click", function (e) {
+$('#navbar a, .tabular-nav a, .footer-main-nav-ul a').on("click", function (e) {
     // Prevent default events firing
     e.preventDefault();
 
     // Read attribute value of clicked link
     var target = $(e.target).data('target');
-    var targetArea = $(e.target).parents('#navbar, .tabular-nav, #js-footer-nav-container').data('targetarea');
+    var targetArea = $(e.target).parents('#navbar, .tabular-nav, .footer-main-nav-ul').data('targetarea');
 
     // Hide all divisions from parent division first
     $('#' + targetArea + ' div').hide();

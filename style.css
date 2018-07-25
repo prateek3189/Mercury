@@ -1,47 +1,10 @@
-/* Flexbox CSS */
-/* Flex Referred from: http://jsfiddle.net/MUrPj/14/ */
-.box {
-  display: flex;
-  flex-direction: column; }
-
-.box-header {
-  flex: 0 0 auto; }
-
-.boxContent {
-  flex: 1 0 auto; }
-
-.boxFooter {
-  flex: 0 1 auto; }
-
-/* ---- FOR SMALL SCREENS ----- */
-@media screen and (max-width: 992px) {
-  .flex-container > div {
-    margin: 5px;
-    display: inline-block;
-    line-height: 35px;
-    font-size: 1.1em; }
-  .flex-container > div > span > a {
-    text-decoration: none;
-    color: #347aad; } }
-
-/* ---- FOR LARGE SCREENS -----*/
-@media screen and (min-width: 600px) {
-  .flex-container div {
-    margin: 5px;
-    display: inline-block;
-    text-align: center;
-    line-height: 35px;
-    font-size: 1.1em; }
-  .flex-container > div > span > a {
-    text-decoration: none;
-    color: #347aad; } }
-
+/* Common CSS */
 /* Navbar CSS */
 nav {
   justify-content: flex-start; }
 
 /* ---- FOR SMALL SCREENS ----- */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 600px) {
   .header-branding, .header-member-info, #rightcolumn {
     justify-content: flex-start; }
   .header-branding {
@@ -50,23 +13,23 @@ nav {
     width: 100%;
     height: 100px;
     padding-right: 6px; }
-  .header-member-info-content {
-    height: 50%;
-    margin-top: 2px; }
-  .header-member-info-content span {
-    justify-content: flex-start;
-    padding-left: 5px; }
-  .member-navigation {
-    float: left;
-    height: 50%; }
-  .member-navigation ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding-right: 4px; }
-  .member-navigation ul li a {
-    text-decoration: none;
-    color: #347aad;
-    font-size: .85em; }
+    .header-member-info .header-member-info-content {
+      height: 50%;
+      margin-top: 2px; }
+      .header-member-info .header-member-info-content span {
+        justify-content: flex-start;
+        padding-left: 5px; }
+    .header-member-info .member-navigation {
+      float: left;
+      height: 50%; }
+      .header-member-info .member-navigation ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding-right: 4px; }
+      .header-member-info .member-navigation ul li a {
+        text-decoration: none;
+        color: #347aad;
+        font-size: .85em; }
   #rightcolumn {
     width: 100%; }
   .header-itinerary {
@@ -86,18 +49,18 @@ nav {
     margin-left: 0px;
     list-style-type: none;
     line-height: 1.5; }
-  nav ul li {
-    display: inline-block;
-    margin: 1px;
-    padding: 2px;
-    font-size: 18px;
-    background-color: #FFFFFF;
-    width: 100%;
-    vertical-align: top; }
-  nav ul li ul {
-    display: none;
-    margin: 5px;
-    font-size: 18px; }
+    nav ul li {
+      display: inline-block;
+      margin: 1px;
+      padding: 2px;
+      font-size: 18px;
+      background-color: #FFFFFF;
+      width: 100%;
+      vertical-align: top; }
+      nav ul li ul {
+        display: none;
+        margin: 5px;
+        font-size: 18px; }
   nav > ul > li > a:focus {
     background-color: transparent;
     border: 1px solid #000000; }
@@ -117,22 +80,22 @@ nav {
     width: 60%;
     height: 90px;
     padding-right: 6px; }
-  .header-member-info-content {
-    height: 50%;
-    margin-top: 2px; }
-  .header-member-info-content span {
-    float: right; }
-  .member-navigation {
-    float: right;
-    height: 50%; }
-  .member-navigation ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding-right: 4px; }
-  .member-navigation ul li a {
-    text-decoration: none;
-    color: #347aad;
-    font-size: .85em; }
+    .header-member-info .header-member-info-content {
+      height: 50%;
+      margin-top: 2px; }
+      .header-member-info .header-member-info-content span {
+        float: right; }
+    .header-member-info .member-navigation {
+      float: right;
+      height: 50%; }
+      .header-member-info .member-navigation ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding-right: 4px; }
+        .header-member-info .member-navigation ul li a {
+          text-decoration: none;
+          color: #347aad;
+          font-size: .85em; }
   #rightcolumn {
     width: 10%; }
   .header-itinerary {
@@ -154,77 +117,65 @@ nav {
     padding-left: 0px;
     margin-left: 0px;
     list-style-type: none;
-    line-height: 1.42857143; }
-  nav ul li {
-    display: inline-block;
-    margin: 1px;
-    padding: 2px;
-    font-size: 18px;
-    background-color: #FFFFFF;
-    vertical-align: top; }
+    line-height: 1.5; }
+    nav ul li {
+      display: inline-block;
+      margin: 1px;
+      padding: 2px;
+      font-size: 18px;
+      background-color: #FFFFFF;
+      vertical-align: top; }
+      nav ul li ul {
+        display: none;
+        margin: 5px;
+        font-size: 18px; }
   nav > ul > li > a:focus {
     background-color: transparent;
     border: 1px solid #347aad; }
-  nav ul li ul {
-    display: none;
-    margin: 5px;
-    font-size: 18px; }
   nav ul li a, nav ul li ul li a {
     color: #347aad;
     text-decoration: none; } }
 
-#searchDeals {
-  display: none; }
-
-#searchBarSection {
-  width: 100%; }
-
-#dealSection ul li button {
-  border: none;
-  background-color: transparent; }
-
-#dealSection ul li button span {
-  display: none; }
-
 /* ---- FOR LARGE SCREENS -----*/
 @media screen and (min-width: 600px) {
-  .flexDiv {
+  .container {
     display: flex;
     flex-flow: column;
     width: 80%;
     margin: 0px auto; }
-  #offers-div {
+  .offers-div {
     display: flex;
-    flex-direction: row; }
-  #offers-div > .text {
-    padding-left: 10px;
-    font-family: Open Sans,sans-serif;
-    width: 80%;
-    color: #347aad; }
-  #offers-div > .offers-button {
-    width: 20%; }
-  #offers-div > .offers-button > .btn-link {
-    width: 100%;
-    height: 100%;
-    border-style: none;
-    font-family: Open Sans,sans-serif; }
+    flex-direction: row;
+    justify-content: flex-start; }
+    .offers-div .offers-header {
+      padding-left: 10px;
+      font-family: Open Sans, sans-serif;
+      width: 80%;
+      color: #347aad; }
+    .offers-div .offers-btn {
+      width: 20%;
+      margin-top: 25px;
+      text-align: center; }
+      .offers-div .offers-btn .btn-link {
+        width: 100%;
+        height: 100%;
+        border-style: none;
+        font-family: Open Sans, sans-serif; }
   .tabular-nav {
     display: flex;
     flex-flow: row;
-    /*border-style: dotted;*/
     padding-bottom: 0.1em; }
-  .tabular-nav > div {
-    padding: 10px;
-    font-family: Open Sans,sans-serif; }
-  .tabular-nav > div > a {
-    text-decoration: none; }
+    .tabular-nav div {
+      padding: 10px;
+      font-family: Open Sans, sans-serif; }
+      .tabular-nav div a {
+        text-decoration: none; }
   .tabular-nav > div > .active {
     background-color: deepskyblue; }
   #parent {
     display: flex;
-    flex-flow: column;
-    /*border-style: dashed;*/ }
-  #dealSection ul {
+    flex-flow: column; }
+  .carousel ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -233,177 +184,191 @@ nav {
     list-style-type: none;
     /*border-style: dotted;*/
     padding: 10px; }
-  #dealSection ul li {
-    width: 30%;
-    padding: 20px; }
-  #dealFinder {
+    .carousel ul li {
+      width: 30%;
+      padding: 20px; }
+      .carousel ul li button {
+        border: none;
+        background-color: transparent; }
+        .carousel ul li button span {
+          display: none; }
+  .dealfinder-header {
     background-color: #5e5e5e;
     color: #fff;
     padding-left: 1em;
-    font-size: 0.800rem;
-    font-family: "Open Sans",sans-serif;
+    font-size: 0.8rem;
+    font-family: Open Sans, sans-serif;
     font-weight: 600; }
-  #searchDealSection {
+  .dealfinder {
     display: flex;
     flex-direction: row;
     height: 35px;
     padding: 10px; }
-  #searchDealBar {
-    width: 75%;
-    font-family: "Open Sans",sans-serif;
-    padding-right: 2em;
-    border-style: groove;
-    margin-right: 2em;
-    padding: 5px;
-    color: #757575;
-    font-size: 1rem; }
-  #searchDealBtn {
-    width: 10%;
-    background-color: #285e86;
-    color: white;
-    border-style: none;
-    height: 100%;
-    padding: 0px; } }
+    .dealfinder .dealfinder-search-bar {
+      width: 100%; }
+      .dealfinder .dealfinder-search-bar #searchDealBar {
+        width: 75%;
+        font-family: Open Sans, sans-serif;
+        padding-right: 2em;
+        border-style: groove;
+        margin-right: 2em;
+        padding: 5px;
+        color: #757575;
+        font-size: 1rem; }
+      .dealfinder .dealfinder-search-bar #searchDeals {
+        display: none; }
+      .dealfinder .dealfinder-search-bar .dealfinder-search-btn {
+        width: 10%;
+        background-color: #285e86;
+        color: white;
+        border-style: none;
+        height: 100%;
+        padding: 0px; } }
 
 /* ---- FOR Smaller SCREENS -----*/
 @media screen and (max-width: 600px) {
-  .flexDiv {
+  .container {
     display: flex;
     flex-flow: column;
     width: 95%;
     margin: 0px auto; }
-  #offers-div {
+  .offers-div {
     display: flex;
-    /*flex-direction: row;*/ }
-  #offers-div > div {
-    /*border-style: dotted;*/ }
-  #offers-div > .text {
-    padding-left: 10px;
-    font-family: Open Sans,sans-serif;
-    width: 80%;
-    color: #347aad; }
-  #offers-div > .offers-button {
-    width: 20%; }
-  #offers-div > .offers-button > .btn-link {
-    width: 100%;
-    height: 100%;
-    border-style: none;
-    font-family: Open Sans,sans-serif; }
+    flex-direction: row;
+    padding-top: 2rem; }
+    .offers-div .offers-header {
+      position: relative;
+      float: left;
+      padding-left: 1.5em;
+      vertical-align: middle;
+      padding-left: 10px;
+      font-family: Open Sans, sans-serif;
+      width: 80%;
+      color: #347aad; }
+    .offers-div .offers-btn {
+      width: 20%;
+      margin-top: 35px; }
+      .offers-div .offers-btn .btn-link {
+        width: 100%;
+        height: 100%;
+        border-style: none;
+        font-family: Open Sans, sans-serif; }
   .tabular-nav {
     display: flex;
     flex-flow: row;
-    /*border-style: dotted;*/
     padding-bottom: 0.1em; }
-  .tabular-nav > div {
-    padding: 10px;
-    font-family: Open Sans,sans-serif; }
-  .tabular-nav > div > a {
-    text-decoration: none; }
+    .tabular-nav div {
+      padding: 10px;
+      font-family: Open Sans, sans-serif; }
+      .tabular-nav div a {
+        text-decoration: none; }
   .tabular-nav > div > .active {
     background-color: deepskyblue; }
   #parent {
     display: flex;
-    flex-flow: column;
-    /*border-style: dashed;*/ }
-  #dealSection ul {
+    flex-flow: column; }
+  .carousel ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 0px;
     padding-left: 0px;
     list-style-type: none;
-    /*border-style: dotted;*/
     padding: 10px;
-    /*border-style: solid;*/
     margin-bottom: 0.5em;
     margin-left: auto;
     margin-right: auto;
     width: 80%; }
-  #dealSection ul li {
-    margin-bottom: 0.5em; }
-  #dealFinder {
+    .carousel ul li {
+      margin-bottom: 0.5em;
+      margin: 0px auto; }
+      .carousel ul li button {
+        border: none;
+        background-color: transparent; }
+        .carousel ul li button span {
+          display: none; }
+  .dealfinder-header {
     background-color: #5e5e5e;
     color: #fff;
     padding-left: 1em;
     font-size: 0.800rem;
-    font-family: "Open Sans",sans-serif;
+    font-family: Open Sans, sans-serif;
     font-weight: 600; }
-  #searchDealSection {
+  .dealfinder {
     display: flex;
     flex-direction: row;
-    height: 40px; }
-  #searchDealBar {
-    width: 60%;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    font-family: "Open Sans",sans-serif;
-    border-style: groove;
-    margin-right: 1em;
-    height: 100%;
-    color: #757575;
-    font-size: 1rem; }
-  #searchDealBtn {
-    width: 30%;
-    background-color: #285e86;
-    color: white;
-    border-style: none;
-    height: 100%; } }
+    height: 35px;
+    padding: 10px; }
+    .dealfinder .dealfinder-search-bar {
+      width: 100%; }
+      .dealfinder .dealfinder-search-bar #searchDealBar {
+        width: 75%;
+        font-family: Open Sans, sans-serif;
+        padding-right: 2em;
+        border-style: groove;
+        padding: 5px;
+        color: #757575;
+        font-size: 1rem; }
+      .dealfinder .dealfinder-search-bar #searchDeals {
+        display: none; }
+      .dealfinder .dealfinder-search-bar .dealfinder-search-btn {
+        width: 20%;
+        background-color: #285e86;
+        color: white;
+        border-style: none;
+        height: 100%;
+        padding: 0px; } }
 
 /* Footer CSS */
 footer {
-  -ms-flex: 0 1 auto;
-  -webkit-flex: 0 1 auto;
   flex: 0 1 auto;
   display: flex;
   background-color: #347aad;
   padding: 2px;
   margin-top: 2em; }
+  footer div {
+    justify-content: flex-start;
+    flex-wrap: nowrap; }
+  footer h3 {
+    color: #FFFFFF;
+    padding-left: 5px;
+    padding-bottom: 2px; }
+  footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 2px; }
+  footer ul {
+    list-style-type: none;
+    padding: 3px; }
+  footer ul li {
+    padding: 3px; }
+  footer button {
+    color: #FFFFFF;
+    border-color: transparent;
+    background-color: transparent;
+    fontFamily: Open Sans, sans-serif; }
 
-footer > div {
-  justify-content: flex-start;
-  flex-wrap: nowrap; }
-
-footer h3 {
-  color: #FFFFFF;
-  padding-left: 5px;
-  padding-bottom: 2px; }
-
-footer a {
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 2px; }
-
-footer ul {
-  list-style-type: none;
-  padding: 3px; }
-
-footer ul li {
-  padding: 3px; }
-
-footer button {
-  color: #FFFFFF;
-  border-color: transparent;
-  background-color: transparent;
-  fontFamily: Open Sans, sans-serif; }
-
-.footer-navigation-links-left, .footer-navigation-links-right {
+.footer-main-nav, .footer-other-links {
   float: left;
   min-height: 250px; }
 
-.footer-navigation-links-left {
+.footer-main-nav {
   width: 40%;
   background-color: #347aad; }
 
-.footer-navigation-links-right {
+.footer-other-links {
   width: 59%;
   background-color: #347aad; }
 
 a {
   text-decoration: none; }
 
-body {
+head, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  fontFamily: Open Sans, sans-serif;
+  padding: 0;
+  font-family: Open Sans, sans-serif;
   color: #5e5e5e; }
 
 .visually-hidden, .radio-toggle input[type='radio'] {
@@ -416,77 +381,11 @@ body {
   position: absolute;
   width: 1px; }
 
-.wrapper {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0; }
-
-#Flight, #Car, #Hotel, #Activity {
-  display: block;
+.Flight, .Car, .Hotel, .Activity {
   background-color: #347aad;
   padding: 10px;
   height: 200px;
   color: #FFFFFF; }
-
-/* ---- FOR SMALL SCREENS ----- */
-@media screen and (max-width: 992px) {
-  .offers-div {
-    padding-top: 2rem; }
-  .banner {
-    width: 100%;
-    margin: 0 auto; }
-  .marketing-text-banner {
-    background-color: rgba(255, 255, 255, 0.8); }
-  .text {
-    position: relative;
-    float: left;
-    padding-left: 1.5em;
-    vertical-align: middle;
-    width: 70%; }
-  .cta {
-    padding-top: 8px; }
-  .cta button {
-    position: relative;
-    text-align: center;
-    float: left;
-    width: 18%;
-    padding-right: 2.5%;
-    height: 65px;
-    background: #fff;
-    box-shadow: 0px 0px 11px 10px #fff; }
-  .cta button a {
-    text-decoration: none; } }
-
-/* ---- FOR LARGE SCREENS -----*/
-@media screen and (min-width: 600px) {
-  .offers-div {
-    padding-top: 2rem;
-    height: 700px; }
-  .banner {
-    width: 80%;
-    margin: 0 auto; }
-  .marketing-text-banner {
-    background-color: rgba(255, 255, 255, 0.8); }
-  .text {
-    position: relative;
-    float: left;
-    padding-left: 1.5em;
-    vertical-align: middle;
-    width: 80%; }
-  .cta {
-    padding-top: 8px; }
-  .cta button {
-    position: relative;
-    text-align: center;
-    float: right;
-    width: 13%;
-    padding-right: 1.5%;
-    height: 60px;
-    background: #fff;
-    box-shadow: 0px 0px 11px 10px #fff; }
-  .cta button a {
-    text-decoration: none; } }
 
 a.skip-main {
   left: -999px;
@@ -511,3 +410,40 @@ a.skip-main:focus, a.skip-main:active {
   text-align: center;
   font-size: 1.2em;
   z-index: 999; }
+
+/* ---- FOR SMALL SCREENS ----- */
+@media screen and (max-width: 600px) {
+  .container-fluid {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+    height: 100%; }
+  .banner {
+    width: 100%;
+    margin: 0 auto; }
+  .marketing-text-banner {
+    background-color: rgba(255, 255, 255, 0.8); } }
+
+/* ---- FOR LARGE SCREENS -----*/
+@media screen and (min-width: 600px) {
+  .container-fluid {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+    height: 100%; }
+  #offers-div {
+    padding-top: 2rem;
+    height: 700px; }
+  .banner {
+    width: 80%;
+    margin: 0 auto; }
+  .marketing-text-banner {
+    background-color: rgba(255, 255, 255, 0.8); }
+  .offers-header {
+    position: relative;
+    float: left;
+    padding-left: 1.5em;
+    vertical-align: middle;
+    width: 80%; } }

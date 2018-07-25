@@ -1,10 +1,10 @@
-﻿$greyColor: #5e5e5e;
+﻿/* Common CSS */
+$greyColor: #5e5e5e;
 $fontFamily: Open Sans,sans-serif;
 $blueColor: #347aad;
 $whiteColor: #FFFFFF;
 $blackColor: #000000;
 
-@import '_flex';
 @import '_header';
 @import '_deals';
 @import '_footer';
@@ -13,9 +13,12 @@ a {
     text-decoration: none;
 }
 
-body {
+head, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
-    fontFamily: $fontFamily;
+    padding: 0;
+    font-family: $fontFamily;
     color: $greyColor;
 }
 
@@ -30,107 +33,13 @@ body {
     width: 1px;
 }
 
-.wrapper {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-#Flight, #Car, #Hotel, #Activity {
-    display: block;
+.Flight, .Car, .Hotel, .Activity {
     background-color: $blueColor;
     padding: 10px;
     height: 200px;
     color: $whiteColor;
 }
 
-/* ---- FOR SMALL SCREENS ----- */
-@media screen and (max-width: 992px) {
-    .offers-div {
-        padding-top: 2rem;
-    }
-
-    .banner {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .marketing-text-banner {
-        background-color: rgba(255,255,255,0.8);
-    }
-
-    .text {
-        position: relative;
-        float: left;
-        padding-left: 1.5em;
-        vertical-align: middle;
-        width: 70%;
-    }
-
-    .cta {
-        padding-top: 8px;
-    }
-
-    .cta button {
-        position: relative;
-        text-align: center;
-        float: left;
-        width: 18%;
-        padding-right: 2.5%;
-        height: 65px;
-        background: #fff;
-        box-shadow: 0px 0px 11px 10px #fff;
-    }
-
-    .cta button a {
-        text-decoration: none;
-    }
-}
-
-/* ---- FOR LARGE SCREENS -----*/
-@media screen and (min-width: 600px) {
-    .offers-div {
-        padding-top: 2rem;
-        height: 700px;
-    }
-
-    .banner {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .marketing-text-banner {
-        background-color: rgba(255,255,255,0.8);
-    }
-
-    .text {
-        position: relative;
-        float: left;
-        padding-left: 1.5em;
-        vertical-align: middle;
-        width: 80%;
-    }
-
-    .cta {
-        padding-top: 8px;
-    }
-
-    .cta button {
-        position: relative;
-        text-align: center;
-        float: right;
-        width: 13%;
-        padding-right: 1.5%;
-        height: 60px;
-        background: #fff;
-        box-shadow: 0px 0px 11px 10px #fff;
-    }
-
-    .cta button a {
-        text-decoration: none;
-    }
-}
 
 a.skip-main {
     left: -999px;
@@ -156,4 +65,62 @@ a.skip-main:focus, a.skip-main:active {
     text-align: center;
     font-size: 1.2em;
     z-index: 999;
+}
+
+
+
+/* ---- FOR SMALL SCREENS ----- */
+@media screen and (max-width: 600px) {
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .banner {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .marketing-text-banner {
+        background-color: rgba(255,255,255,0.8);
+    }
+
+}
+
+/* ---- FOR LARGE SCREENS -----*/
+@media screen and (min-width: 600px) {
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    #offers-div {
+        padding-top: 2rem;
+        height: 700px;
+    }
+
+    .banner {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .marketing-text-banner {
+        background-color: rgba(255,255,255,0.8);
+    }
+
+    .offers-header {
+        position: relative;
+        float: left;
+        padding-left: 1.5em;
+        vertical-align: middle;
+        width: 80%;
+    }
+
 }

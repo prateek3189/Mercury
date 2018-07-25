@@ -1,66 +1,51 @@
-﻿#searchDeals {
-    display: none;
-}
-
-#searchBarSection {
-    width: 100%;
-}
-
-#dealSection ul li button {
-    border: none;
-    background-color: transparent;
-}
-
-#dealSection ul li button span {
-    display: none;
-}
-
-/* ---- FOR LARGE SCREENS -----*/
+﻿/* ---- FOR LARGE SCREENS -----*/
 @media screen and (min-width: 600px) {
-    .flexDiv {
+    .container {
         display: flex;
         flex-flow: column;
         width: 80%;
         margin: 0px auto;
     }
 
-    #offers-div {
+    .offers-div {
         display: flex;
         flex-direction: row;
-    }
+        justify-content: flex-start;
 
-    #offers-div > .text {
-        padding-left: 10px;
-        font-family: Open Sans,sans-serif;
-        width: 80%;
-        color: #347aad;
-    }
+        .offers-header {
+            padding-left: 10px;
+            font-family: $fontFamily;
+            width: 80%;
+            color: $blueColor;
+        }
 
-    #offers-div > .offers-button {
-        width: 20%;
-    }
+        .offers-btn {
+            width: 20%;
+            margin-top: 25px;
+            text-align: center;
 
-    #offers-div > .offers-button > .btn-link {
-        width: 100%;
-        height: 100%;
-        border-style: none;
-        font-family: Open Sans,sans-serif;
+            .btn-link {
+                width: 100%;
+                height: 100%;
+                border-style: none;
+                font-family: $fontFamily;
+            }
+        }
     }
 
     .tabular-nav {
         display: flex;
         flex-flow: row;
-        /*border-style: dotted;*/
         padding-bottom: 0.1em;
-    }
 
-    .tabular-nav > div {
-        padding: 10px;
-        font-family: Open Sans,sans-serif;
-    }
+        div {
+            padding: 10px;
+            font-family: $fontFamily;
 
-    .tabular-nav > div > a {
-        text-decoration: none;
+            a {
+                text-decoration: none;
+            }
+        }
     }
 
     .tabular-nav > div > .active {
@@ -70,10 +55,9 @@
     #parent {
         display: flex;
         flex-flow: column;
-        /*border-style: dashed;*/
     }
 
-    #dealSection ul {
+    .carousel ul {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -82,100 +66,119 @@
         list-style-type: none;
         /*border-style: dotted;*/
         padding: 10px;
+
+        li {
+            width: 30%;
+            padding: 20px;
+
+            button {
+                border: none;
+                background-color: transparent;
+
+                span {
+                    display: none;
+                }
+            }
+        }
     }
 
-    #dealSection ul li {
-        width: 30%;
-        padding: 20px;
-    }
-
-    #dealFinder {
-        background-color: #5e5e5e;
+    .dealfinder-header {
+        background-color: $greyColor;
         color: #fff;
         padding-left: 1em;
-        font-size: 0.800rem;
-        font-family: "Open Sans",sans-serif;
+        font-size: 0.8rem;
+        font-family: $fontFamily;
         font-weight: 600;
     }
 
-    #searchDealSection {
+    .dealfinder {
         display: flex;
         flex-direction: row;
         height: 35px;
         padding: 10px;
+
+        .dealfinder-search-bar {
+            width: 100%;
+
+            #searchDealBar {
+                width: 75%;
+                font-family: $fontFamily;
+                padding-right: 2em;
+                border-style: groove;
+                margin-right: 2em;
+                padding: 5px;
+                color: #757575;
+                font-size: 1rem;
+            }
+
+            #searchDeals {
+                display: none;
+            }
+
+            .dealfinder-search-btn {
+                width: 10%;
+                background-color: #285e86;
+                color: white;
+                border-style: none;
+                height: 100%;
+                padding: 0px;
+            }
+        }
     }
 
-    #searchDealBar {
-        width: 75%;
-        font-family: "Open Sans",sans-serif;
-        padding-right: 2em;
-        border-style: groove;
-        margin-right: 2em;
-        padding: 5px;
-        color: #757575;
-        font-size: 1rem;
-    }
-
-    #searchDealBtn {
-        width: 10%;
-        background-color: #285e86;
-        color: white;
-        border-style: none;
-        height: 100%;
-        padding: 0px;
-    }
 }
 
 /* ---- FOR Smaller SCREENS -----*/
 @media screen and (max-width: 600px) {
-    .flexDiv {
+    .container {
         display: flex;
         flex-flow: column;
         width: 95%;
         margin: 0px auto;
     }
 
-    #offers-div {
+    .offers-div {
         display: flex;
-        /*flex-direction: row;*/
-    }
+        flex-direction: row;
+        padding-top: 2rem;
 
-    #offers-div > div {
-        /*border-style: dotted;*/
-    }
+        .offers-header {
+            position: relative;
+            float: left;
+            padding-left: 1.5em;
+            vertical-align: middle;
+            padding-left: 10px;
+            font-family: $fontFamily;
+            width: 80%;
+            color: $blueColor;
+        }
 
-    #offers-div > .text {
-        padding-left: 10px;
-        font-family: Open Sans,sans-serif;
-        width: 80%;
-        color: #347aad;
-    }
+        .offers-btn {
+            width: 20%;
+            margin-top: 35px;
 
-    #offers-div > .offers-button {
-        width: 20%;
-    }
-
-    #offers-div > .offers-button > .btn-link {
-        width: 100%;
-        height: 100%;
-        border-style: none;
-        font-family: Open Sans,sans-serif;
+            .btn-link {
+                width: 100%;
+                height: 100%;
+                border-style: none;
+                font-family: $fontFamily;
+            }
+        }
     }
 
     .tabular-nav {
         display: flex;
         flex-flow: row;
-        /*border-style: dotted;*/
         padding-bottom: 0.1em;
-    }
 
-    .tabular-nav > div {
-        padding: 10px;
-        font-family: Open Sans,sans-serif;
-    }
+        div {
+            padding: 10px;
+            font-family: $fontFamily;
 
-    .tabular-nav > div > a {
-        text-decoration: none;
+            a {
+                text-decoration: none;
+            }
+        }
     }
 
     .tabular-nav > div > .active {
@@ -185,61 +188,77 @@
     #parent {
         display: flex;
         flex-flow: column;
-        /*border-style: dashed;*/
     }
 
-    #dealSection ul {
+    .carousel ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-top: 0px;
         padding-left: 0px;
         list-style-type: none;
-        /*border-style: dotted;*/
         padding: 10px;
-        /*border-style: solid;*/
         margin-bottom: 0.5em;
         margin-left: auto;
         margin-right: auto;
         width: 80%;
+
+        li {
+            margin-bottom: 0.5em;
+            margin: 0px auto;
+
+            button {
+                border: none;
+                background-color: transparent;
+
+                span {
+                    display: none;
+                }
+            }
+        }
     }
 
-    #dealSection ul li {
-        margin-bottom: 0.5em;
-    }
-
-    #dealFinder {
-        background-color: #5e5e5e;
+    .dealfinder-header {
+        background-color: $greyColor;
         color: #fff;
         padding-left: 1em;
         font-size: 0.800rem;
-        font-family: "Open Sans",sans-serif;
+        font-family: $fontFamily;
         font-weight: 600;
     }
 
-    #searchDealSection {
+    .dealfinder {
         display: flex;
         flex-direction: row;
-        height: 40px;
+        height: 35px;
+        padding: 10px;
+
+        .dealfinder-search-bar {
+            width: 100%;
+
+            #searchDealBar {
+                width: 75%;
+                font-family: $fontFamily;
+                padding-right: 2em;
+                border-style: groove;
+                padding: 5px;
+                color: #757575;
+                font-size: 1rem;
+            }
+
+            #searchDeals {
+                display: none;
+            }
+
+            .dealfinder-search-btn {
+                width: 20%;
+                background-color: #285e86;
+                color: white;
+                border-style: none;
+                height: 100%;
+                padding: 0px;
+            }
+        }
     }
 
-    #searchDealBar {
-        width: 60%;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        font-family: "Open Sans",sans-serif;
-        border-style: groove;
-        margin-right: 1em;
-        height: 100%;
-        color: #757575;
-        font-size: 1rem;
-    }
-
-    #searchDealBtn {
-        width: 30%;
-        background-color: #285e86;
-        color: white;
-        border-style: none;
-        height: 100%;
-    }
 }

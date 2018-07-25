@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="box wrapper">
-        <a href="#main" class="skip-main">Skip to main content</a>
-        <header class="boxHeader">
+        <header>
+            <a href="#main" class="skip-main">Skip to main content</a>
             <div class="header-branding">
                 <a href="./abc.html" title="Return To Home">
                     <h1>Mercury Logo</h1>
@@ -42,7 +41,7 @@
                     My Itinerary
                 </button>
             </div>
-            <div class="boxHeader">
+            <div>
                 <nav id="navbar" role="navigation" aria-label="main navigation" data-targetarea="parent">
                     <ul style="padding-top: 0px;">
                         <li><a href="#Flight" class="active" data-target="title_1">Flight</a></li>
@@ -55,71 +54,73 @@
                 </nav>
             </div>
         </header>
-        <div class="boxContent box">
-            <div class="flexDiv">
-                <div id="offers-div">
-                    <div class="text">
+
+
+    <div class="container-fluid">
+            <div class="container">
+                <div class="offers-div">
+                    <div class="offers-header">
                         <h2 id="offers-heading" aria-hidden="true">Spread your wings and discover new destinations!</h2>
                     </div>
-                    <div class="offers-button">
-                        <button type="button" aria-label="View Offers" class="btn-link">
-                            <a href="#Deals">View Offers</a>
-                        </button>
+                    <div class="offers-btn">
+                        <a href="#Deals" class="btn-link" aria-label="View Offers" >View Offers</a>
                     </div>
                 </div>
-                <div class="tabular-nav" data-targetarea="parent" id="main">
-                    <div><a href="#Flight" class="active" data-target="title_1">Flight</a></div>
-                    <div><a href="#Hotel" data-target="title_2">Hotels</a></div>
-                    <div><a href="#Car" data-target="title_3">Cars</a></div>
-                    <div><a href="#Activity" data-target="title_4">Activity</a></div>
-                </div>
-                <div id="parent">
-                    <div id="title_1">Flights DIV</div>
-                    <div id="title_2">Hotels DIV</div>
-                    <div id="title_3">Cars DIV</div>
-                    <div id="title_4">Activity DIV</div>
-                </div>
-                <div id="dealSection">
-                    <div id="carousel">
-                        <ul>
-                            <li>
-                                <button aria-labelledby="carousel-1">
-                                    <img src="./assets/carousel-1.jpg" role="presentation">
-                                    <span id="carousel-1">Search for great value car rentals anywhere in the world</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button aria-labelledby="carousel-2">
-                                    <img src="./assets/carousel-2.jpg" role="presentation">
-                                    <span id="carousel-2">Chhose up to 5 free offers. Up to $500 free onboard spend</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button aria-labelledby="carousel-3">
-                                    <img src="./assets/carousel-3.jpg" role="presentation">
-                                    <span id="carousel-3">Singapore Airlines - New York to Singapore Starting 12 October</span>
-                                </button>
-                            </li>
-                        </ul>
+                <div id="main">
+                    <div class="tabular-nav" data-targetarea="parent">
+                        <div><a href="#Flight" class="active" data-target="title_1">Flight</a></div>
+                        <div><a href="#Hotel" data-target="title_2">Hotels</a></div>
+                        <div><a href="#Car" data-target="title_3">Cars</a></div>
+                        <div><a href="#Activity" data-target="title_4">Activity</a></div>
                     </div>
-                    <div id="dealFinder">
-                        <h2>DEAL FINDER</h2>
+                    <div class="tabular-form" id="parent">
+                        <div id="title_1" class="Flight">Flights DIV</div>
+                        <div id="title_2" class="Hotel">Hotels DIV</div>
+                        <div id="title_3" class="Car">Cars DIV</div>
+                        <div id="title_4" class="Activity">Activity DIV</div>
                     </div>
-                    <div id="searchDealSection">
-                        <div id="searchBarSection">
-                            <input type="text" aria-labelledby="searchDeals" role="textbox" value="Find offer by destination or name" id="searchDealBar" />
-                            <span id="searchDeals">Find offers</span>
-                            <button type="button" aria-label="Search" id="searchDealBtn">SEARCH</button>
-                        </div>
+                </div>
+
+                <div class="carousel">
+                    <ul>
+                        <li>
+                            <button aria-labelledby="carousel-1">
+                                <img src="./assets/carousel-1.jpg" role="presentation">
+                                <span id="carousel-1">Search for great value car rentals anywhere in the world</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-labelledby="carousel-2">
+                                <img src="./assets/carousel-2.jpg" role="presentation">
+                                <span id="carousel-2">Chhose up to 5 free offers. Up to $500 free onboard spend</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-labelledby="carousel-3">
+                                <img src="./assets/carousel-3.jpg" role="presentation">
+                                <span id="carousel-3">Singapore Airlines - New York to Singapore Starting 12 October</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="dealfinder-header">
+                    <h2>DEAL FINDER</h2>
+                </div>
+
+                <div class="dealfinder">
+                    <div class="dealfinder-search-bar">
+                        <input type="text" aria-labelledby="searchDeals" role="textbox" value="Find offer by destination or name" id="searchDealBar" />
+                        <span id="searchDeals">Find offers</span>
+                        <button type="button" aria-label="Search" class="dealfinder-search-btn">SEARCH</button>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <footer class="footer">
-            <div role="navigation" aria-label="Main Navigation List" class="footer-navigation-links-left">
+        <footer>
+            <div role="navigation" aria-label="Main Navigation List" class="footer-main-nav">
                 <h3>Main Navigation</h3>
-                <ul id="js-footer-nav-container" data-targetarea="parent">
+                <ul class="footer-main-nav-ul" data-targetarea="parent">
                     <li>
                         <a href="#Flight" class="js-footer-nav" data-target="title_1">
                             Flights
@@ -148,14 +149,14 @@
                     </li>
                 </ul>
             </div>
-            <div role="navigation" aria-label="Other Links List" class="footer-navigation-links-right">
+            <div role="navigation" aria-label="Other Links List" class="footer-other-links">
                 <h3>Other Links</h3>
                 <ul>
-                    <li><button data-content="faq" data-display="panel" class="js-other-links btn-link" data-qaid="Link_FAQs" type="button">Frequently Asked Questions</button></li>
-                    <li><button data-content="selleroftravel" data-display="panel" class="js-other-links btn-link" data-qaid="Link_SellerOfTravel" type="button">Seller of Travel</button></li>
-                    <li><button data-content="websiteterms" data-display="panel" class="js-other-links btn-link" data-qaid="Link_WebsiteTerms" type="button">Website Terms of Use</button></li>
-                    <li><button data-content="travelterms" data-display="panel" class="js-other-links btn-link" data-qaid="Link_TravelTerms" type="button">Travel Terms &amp; Conditions</button></li>
-                    <li><button data-content="privacypolicy" data-display="panel" class="js-other-links btn-link" data-qaid="Link_PrivacyPolicy" type="button">Privacy Policy</button></li>
+                    <li><button data-content="faq" type="button">Frequently Asked Questions</button></li>
+                    <li><button data-content="selleroftravel" type="button">Seller of Travel</button></li>
+                    <li><button data-content="websiteterms" type="button">Website Terms of Use</button></li>
+                    <li><button data-content="travelterms" type="button">Travel Terms &amp; Conditions</button></li>
+                    <li><button data-content="privacypolicy" type="button">Privacy Policy</button></li>
                 </ul>
             </div>
         </footer>
