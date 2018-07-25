@@ -9,20 +9,21 @@
     </script>
     <![endif]-->
     <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/handlebars.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="main-container">
+    <div class="box wrapper">
         <a href="#main" class="skip-main">Skip to main content</a>
-        <header>
-            <div class="header-logo">
-                <a href="./index.html" title="Return To Home">
-                    <img src="images/logo.png" alt="Logo" width="120" height="70">
+        <header class="boxHeader">
+            <div class="header-branding">
+                <a href="./abc.html" title="Return To Home">
+                    <h1>Mercury Logo</h1>
                 </a>
             </div>
             <div class="header-member-info">
                 <div class="header-member-info-content">
-                    <span>John Smith</span>
+                    <span>John Smith</span><br />
                     <span class="js-header-available-points">500,000 Points</span>
                 </div>
                 <div class="member-navigation">
@@ -34,23 +35,27 @@
                     </ul>
                 </div>
             </div>
-            <div class="rightcolumn">
+            <div id="rightcolumn">
+                <label id="header-itinerary-info" class="visually-hidden">Expand to select itinerary items.</label>
                 <button type="button" class="header-itinerary" aria-describedby="header-itinerary-info">
                     My Itinerary
                 </button>
             </div>
+            <div class="boxHeader">
+                <nav id="navbar" role="navigation" aria-label="main navigation">
+                    <ul style="padding-top: 0px;">
+                        <li><a href="#Flight" onclick="showHideDiv(this.innerHTML)">Flight</a></li>
+                        <li><a href="#Hotel" onclick="showHideDiv(this.innerHTML)">Hotel</a></li>
+                        <li><a href="#Car" onclick="showHideDiv(this.innerHTML)">Cars</a></li>
+                        <li><a href="#Activity" onclick="showHideDiv(this.innerHTML)">Activities</a></li>
+                        <li><a href="#">Cruise Specials</a></li>
+                        <li><a href="#Deals">Deals</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <nav id="navbar" role="navigation" aria-label="main navigation">
-            <ul style="padding-top: 0px;">
-                <li><a href="#Flight" onclick="showHideDiv(this.innerHTML)">Flight</a></li>
-                <li><a href="#Hotel" onclick="showHideDiv(this.innerHTML)">Hotel</a></li>
-                <li><a href="#Car" onclick="showHideDiv(this.innerHTML)">Cars</a></li>
-                <li><a href="#Activity" onclick="showHideDiv(this.innerHTML)">Activities</a></li>
-                <li><a href="#">Cruise Specials</a></li>
-                <li><a href="#Deals">Deals</a></li>
-            </ul>
-        </nav>
-        <!-- <div class="boxContent">
+        <div class="boxContent box">
+
             <div class="offers-div">
                 <div class="banner">
                     <div class="marketing-text-banner" aria-labelledby="offers-heading">
@@ -113,9 +118,9 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
-        <!-- <footer class="footer">
+        <footer class="footer">
             <div role="navigation" aria-label="Main Navigation List" class="footer-navigation-links-left">
                 <h3>Main Navigation</h3>
                 <ul id="js-footer-nav-container">
@@ -157,8 +162,10 @@
                     <li><button data-content="privacypolicy" data-display="panel" class="js-other-links btn-link" data-qaid="Link_PrivacyPolicy" type="button">Privacy Policy</button></li>
                 </ul>
             </div>
-        </footer> -->
+        </footer>
+
     </div>
     <script type="text/javascript" src="./script.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>

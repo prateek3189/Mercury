@@ -1,24 +1,17 @@
-﻿$greyColor: #5e5e5e;
-$fontFamily: Open Sans,sans-serif;
-$blueColor: #347aad;
-$whiteColor: #FFFFFF;
-$blackColor: #000000;
-
+﻿@import '_variables';
 @import '_flex';
 @import '_header';
 @import '_footer';
+@import '_common';
 
-a:-webkit-any-link {
-    text-decoration: none;
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
-body {
-    margin: 0;
-    fontFamily: $fontFamily;
-    color: $greyColor;
-}
-
-.visually-hidden, .radio-toggle input[type='radio'] {
+.radio-toggle input[type='radio'] {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -29,19 +22,12 @@ body {
     width: 1px;
 }
 
-.wrapper {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 #Flight, #Car, #Hotel, #Activity {
     display: block;
-    background-color: $blueColor;
+    background-color: $primaryBlue;
     padding: 10px;
     height: 200px;
-    color: $whiteColor;
+    color: $white;
 }
 
 /* ---- FOR SMALL SCREENS ----- */
@@ -143,7 +129,7 @@ a.skip-main {
 
 a.skip-main:focus, a.skip-main:active {
     color: #fff;
-    background-color: $blueColor;
+    background-color: $primaryBlue;
     left: auto;
     top: auto;
     width: 20%;

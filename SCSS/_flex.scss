@@ -1,14 +1,5 @@
 ﻿/* Flexbox CSS */
 /* Flex Referred from: http://jsfiddle.net/MUrPj/14/ */
-.box {
-    display: flex;
-    flex-direction: column;
-}
-
-.boxHeader {
-    flex: 0 0 auto;
-}
-
 .boxContent {
     flex: 1 0 auto;
 }
@@ -28,7 +19,7 @@
 
     .flex-container > div > span > a {
         text-decoration: none;
-        color: $blueColor;
+        color: $primaryBlue;
     }
 }
 
@@ -44,6 +35,6 @@
 
     .flex-container > div > span > a {
         text-decoration: none;
-        color: $blueColor;
+        color: $primaryBlue;
     }
 }
