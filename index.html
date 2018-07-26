@@ -67,12 +67,12 @@
                     </div>
                 </div>
                 <div id="main">
-                    <div class="tabular-nav" data-targetarea="parent">
-                        <div><a href="#Flight" class="active" data-target="title_1">Flight</a></div>
-                        <div><a href="#Hotel" data-target="title_2">Hotels</a></div>
-                        <div><a href="#Car" data-target="title_3">Cars</a></div>
-                        <div><a href="#Activity" data-target="title_4">Activity</a></div>
-                    </div>
+                    <ul class="tabular-nav" data-targetarea="parent">
+                        <li class="tabular-nav-option"><a href="#Flight" class="active" data-target="title_1">Flight</a></li>
+                        <li class="tabular-nav-option"><a href="#Hotel" data-target="title_2">Hotels</a></li>
+                        <li class="tabular-nav-option"><a href="#Car" data-target="title_3">Cars</a></li>
+                        <li class="tabular-nav-option"><a href="#Activity" data-target="title_4">Activity</a></li>
+                    </ul>
                     <div class="tabular-form" id="parent">
                         <div id="title_1" class="Flight">Flights DIV</div>
                         <div id="title_2" class="Hotel">Hotels DIV</div>
@@ -113,6 +113,113 @@
                         <input type="text" aria-labelledby="searchDeals" role="textbox" value="Find offer by destination or name" id="searchDealBar" />
                         <span id="searchDeals">Find offers</span>
                         <button type="button" aria-label="Search" class="dealfinder-search-btn">SEARCH</button>
+                    </div>
+                </div>
+                <div class="dealfilter">
+                    <div class="dealfilter-heading">
+                        Filter Results
+                    </div>
+                    <div class="dealfilter-panel">
+                        <button class="dealfilter-btn active">Hotel</button>
+                        <button class="dealfilter-btn">Car</button>
+                        <button class="dealfilter-btn">Cruise</button>
+                    </div>
+                    <div class="dealfilter-results">
+                        <ul class="dealfilter-table-heading block-group">
+                            <li class="block col-25">
+                                <button>Destination</button>
+                            </li>
+                            <li class="block col-40">
+                                <button>Name</button>
+                            </li>
+                            <li class="block col-15">
+                                <button>Valid Through</button>
+                            </li>
+                            <li class="block col-20">
+                                <button>Offer</button>
+                            </li>
+                        </ul>
+                        <ul class="dealfilter-table-row block-group">
+                            <li class="block col-25">
+                                Washington, D.C. , US
+                            </li>
+                            <li class="block col-40">
+                                <button>The Dupont Circle Hotel</button>
+                            </li>
+                            <li class="block col-15">
+                                Sep 08, 2018
+                            </li>
+                            <li class="block col-20">
+                                <button>Save Up To 25%</button>
+                            </li>
+                        </ul>
+                        <ul class="dealfilter-table-row block-group">
+                            <li class="block col-25">
+                                Washington, D.C. , US
+                            </li>
+                            <li class="block col-40">
+                                <button>Omni Shoreham Hotel</button>
+                            </li>
+                            <li class="block col-15">
+                                Oct 06, 2018
+                            </li>
+                            <li class="block col-20">
+                                <button>Save Up To 25%</button>
+                            </li>
+                        </ul>
+                        <ul class="dealfilter-table-row block-group">
+                            <li class="block col-25">
+                                Vienna , Austria
+                            </li>
+                            <li class="block col-40">
+                                <button>Vienna Sporthotel</button>
+                            </li>
+                            <li class="block col-15">
+                                Dec 31, 2019
+                            </li>
+                            <li class="block col-20">
+                                <button>Save Up To 30%</button>
+                            </li>
+                        </ul>
+                        <ul class="dealfilter-table-row block-group">
+                            <li class="block col-25">
+                                Sanibel Island , US
+                            </li>
+                            <li class="block col-40">
+                                <button>Song of The Sea</button>
+                            </li>
+                            <li class="block col-15">
+                                Jan 11, 2019
+                            </li>
+                            <li class="block col-20">
+                                <button>Save Up To 15%</button>
+                            </li>
+                        </ul>
+                        <ul class="dealfilter-table-row block-group">
+                            <li class="block col-25">
+                                Sanibel Island , US
+                            </li>
+                            <li class="block col-40">
+                                <button>Sanibel Inn</button>
+                            </li>
+                            <li class="block col-15">
+                                Dec 19, 2019
+                            </li>
+                            <li class="block col-20">
+                                <button>Save Up To 15%</button>
+                            </li>
+                        </ul>
+                        <div class="load-more">
+                            <a href="#" id="load-more-options">Load More</a>
+                        </div>
+                        <div class="last-highlight load-more">
+                            <button aria-labelledby="lastHighlightDescription">
+                                <img src="./assets/last-highlight.jpg" role="presentation">
+                                <span id="lastHighlightDescription">Search for great value car rentals anywhere in the world.</span>
+                            </button>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
@@ -160,6 +267,9 @@
                 </ul>
             </div>
         </footer>
+        <div class="block footer-copyright-container">
+            <span>© 2018 Connexions Loyalty, Inc.</span>
+        </div>
 
     </div>
     <script type="text/javascript" src="./script.js"></script>
