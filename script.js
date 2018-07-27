@@ -4,10 +4,21 @@ $(document).ready(function () {
 
     // Show only default div
     var activate = $('.active').data('target');
-    $("#" + activate).show();
+    $('#' + activate).show();
 });
 
-$('#navbar a, .tabular-nav a, .footer-main-nav-ul a').on("click", function (e) {
+$('.skip-main').focusin(function () {
+    // Set border style when `skip-main` gets focus
+    $('#main').css('outline', 'auto');
+});
+
+$('.skip-main').focusout(function () {
+    // Unset border style when `skip-main` loses focus
+    $('#main').css('outline', 'none');
+});
+
+
+$('#navbar a, .tabular-nav a, .footer-main-nav-ul a').on('click', function (e) {
     // Prevent default events firing
     e.preventDefault();
 
@@ -24,5 +35,14 @@ $('#navbar a, .tabular-nav a, .footer-main-nav-ul a').on("click", function (e) {
     $('#' + target).focus();
 
     // Mark the selected navbar option as `active`
+    $(e.target).addClass('active');
+});
+
+
+$('.dealfilter-btn').on('click', function (e) {
+    // Prevent default events firing
+    e.preventDefault();
+
+    $('.dealfilter-btn').removeClass('active');
     $(e.target).addClass('active');
 });

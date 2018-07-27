@@ -1,0 +1,150 @@
+﻿/* Common CSS */
+$greyColor: #5e5e5e;
+$fontFamily: Open Sans,sans-serif;
+$blueColor: #347aad;
+$whiteColor: #FFFFFF;
+$blackColor: #000000;
+
+@import '_header';
+@import '_deals';
+@import '_footer';
+
+/* ---- FOR LARGE SCREENS -----*/
+@media screen and (min-width: 600px) {
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    head, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: $fontFamily;
+        color: $greyColor;
+    }
+
+    .visually-hidden, .radio-toggle input[type='radio'] {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .Flight, .Car, .Hotel, .Activity {
+        background-color: $blueColor;
+        padding: 10px;
+        height: 200px;
+        color: $whiteColor;
+    }
+
+    a.skip-main {
+        left: -999px;
+        position: absolute;
+        top: auto;
+        width: 20px;
+        height: 1px;
+        overflow: hidden;
+        z-index: -999;
+    }
+
+    a.skip-main:focus, a.skip-main:active {
+        color: #fff;
+        background-color: $blueColor;
+        left: auto;
+        top: auto;
+        width: 20%;
+        height: auto;
+        overflow: auto;
+        margin: 0;
+        padding: 1px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 1.2em;
+        z-index: 999;
+    }
+}
+
+/* ---- FOR SMALL SCREENS ----- */
+@media screen and (max-width: 600px) {
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    head, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: $fontFamily;
+        color: $greyColor;
+
+        h1 {
+            margin-top: 0px;
+        }
+    }
+
+    .visually-hidden, .radio-toggle input[type='radio'] {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .Flight, .Car, .Hotel, .Activity {
+        background-color: $blueColor;
+        padding: 10px;
+        height: 200px;
+        color: $whiteColor;
+    }
+
+    a.skip-main {
+        left: -999px;
+        position: absolute;
+        top: auto;
+        width: 40px;
+        height: 1px;
+        overflow: hidden;
+        z-index: -999;
+    }
+
+    a.skip-main:focus, a.skip-main:active {
+        color: #fff;
+        background-color: $blueColor;
+        left: auto;
+        top: auto;
+        width: 20%;
+        height: auto;
+        overflow: auto;
+        margin: 0;
+        padding: 1px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 1.2em;
+        z-index: 999;
+    }
+}
