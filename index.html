@@ -37,12 +37,12 @@
             </div>
             <div id="rightcolumn">
                 <label id="header-itinerary-info" class="visually-hidden">Expand to select itinerary items.</label>
-                <button type="button" class="header-itinerary" aria-describedby="header-itinerary-info">
+                <button type="button" class="header-itinerary" aria-describedby="header-itinerary-info" aria-hidden="true">
                     My Itinerary
                 </button>
             </div>
             <div>
-                <nav id="navbar" role="navigation" aria-label="main navigation" data-targetarea="parent">
+                <nav id="navbar" role="navigation" aria-label="Primary Navigation" data-targetarea="parent">
                     <ul style="padding-top: 0px;">
                         <li><a href="#Flight" class="active" data-target="title_1">Flight</a></li>
                         <li><a href="#Hotel" data-target="title_2">Hotel</a></li>
@@ -63,15 +63,31 @@
                         <h2 id="offers-heading" aria-hidden="true">Spread your wings and discover new destinations!</h2>
                     </div>
                     <div class="offers-btn">
-                        <a href="#Deals" class="btn-link" aria-label="View Offers" >View Offers</a>
+                        <a href="#dealfinder" class="btn-link" aria-label="Jump to View Offers Section" >View Offers</a>
                     </div>
                 </div>
                 <main id="main">
                     <ul class="tabular-nav" data-targetarea="parent">
-                        <li class="tabular-nav-option"><a href="#Flight" class="active" data-target="title_1">Flight</a></li>
-                        <li class="tabular-nav-option"><a href="#Hotel" data-target="title_2">Hotels</a></li>
-                        <li class="tabular-nav-option"><a href="#Car" data-target="title_3">Cars</a></li>
-                        <li class="tabular-nav-option"><a href="#Activity" data-target="title_4">Activity</a></li>
+                        <li class="tabular-nav-option">
+                            <a href="#Flight" class="active" data-target="title_1">
+                                Flight
+                            </a>
+                        </li>
+                        <li class="tabular-nav-option">
+                            <a href="#Hotel" data-target="title_2">
+                                Hotels
+                            </a>
+                        </li>
+                        <li class="tabular-nav-option">
+                            <a href="#Car" data-target="title_3">
+                                Cars
+                            </a>
+                        </li>
+                        <li class="tabular-nav-option">
+                            <a href="#Activity" data-target="title_4">
+                                Activity
+                            </a>
+                        </li>
                     </ul>
                     <div class="tabular-form" id="parent">
                         <div id="title_1" class="Flight">Flights DIV</div>
@@ -80,8 +96,8 @@
                         <div id="title_4" class="Activity">Activity DIV</div>
                     </div>
                 </main>
-
                 <div class="carousel">
+                    <span id="carousel-description" class="visually-hidden">Top Offers Today</span>
                     <ul>
                         <li>
                             <button aria-labelledby="carousel-1">
@@ -92,7 +108,7 @@
                         <li>
                             <button aria-labelledby="carousel-2">
                                 <img src="./assets/carousel-2.jpg" role="presentation">
-                                <span id="carousel-2">Chhose up to 5 free offers. Up to $500 free onboard spend</span>
+                                <span id="carousel-2">Choose up to 5 free offers. Up to $500 free onboard spend</span>
                             </button>
                         </li>
                         <li>
@@ -103,51 +119,58 @@
                         </li>
                     </ul>
                 </div>
-                
-                <div class="dealfinder-header">
-                    <h2>DEAL FINDER</h2>
+                <div class="dealfinder-header" id="dealfinder">
+                    <h2 aria-labelledby="description">DEAL FINDER</h2>
+                    <span id="description" class="visually-hidden">Find Deals Below</span>
                 </div>
-
                 <div class="dealfinder">
                     <div class="dealfinder-search-bar">
-                        <input type="text" aria-labelledby="searchDeals" role="textbox" value="Find offer by destination or name" id="searchDealBar" />
-                        <span id="searchDeals">Find offers</span>
-                        <button type="button" aria-label="Search" class="dealfinder-search-btn">SEARCH</button>
+                        <input type="text" role="textbox" value="Find offer by destination or name" id="searchDealBar" />
+                        <button type="button" class="dealfinder-search-btn" aria-labelledby="search-btn-description">SEARCH</button>
+                        <span id="search-btn-description" class="visually-hidden" aria-hidden="true">Search Offers</span>
                     </div>
                 </div>
                 <div class="dealfilter">
-                    <div class="dealfilter-heading">
-                        Filter Results
+                    <div class="dealfilter-heading" aria-labelledby="dealfilter-description">
+                        <span aria-hidden="true">Filter Results</span>
+                        <span id="dealfilter-description" class="visually-hidden" aria-hidden="true">Filter Results Based on Options Below</span>
                     </div>
                     <div class="dealfilter-panel">
-                        <button class="dealfilter-btn active">Hotel</button>
-                        <button class="dealfilter-btn">Car</button>
-                        <button class="dealfilter-btn">Cruise</button>
+                        <button class="dealfilter-btn active" aria-labelledby="hotel-filter-btn-description">Hotel</button>
+                        <button class="dealfilter-btn" aria-labelledby="car-filter-btn-description">Car</button>
+                        <button class="dealfilter-btn" aria-labelledby="cruise-filter-btn-description">Cruise</button>
+                        <span id="hotel-filter-btn-description" class="visually-hidden">Filter Results by Hotels</span>
+                        <span id="car-filter-btn-description" class="visually-hidden">Filter Results by Cars</span>
+                        <span id="cruise-filter-btn-description" class="visually-hidden">Filter Results by Cruise</span>
                     </div>
                     <div class="dealfilter-results">
                         <ul class="dealfilter-table-heading block-group">
                             <li class="block col-25">
-                                <button>Destination</button>
+                                <button aria-labelledby="table-head-col1-description">Destination</button>
                             </li>
                             <li class="block col-40">
-                                <button>Name</button>
+                                <button aria-labelledby="table-head-col2-description">Name</button>
                             </li>
                             <li class="block col-15">
-                                <button>Valid Through</button>
+                                <button aria-labelledby="table-head-col3-description">Valid Through</button>
                             </li>
                             <li class="block col-20">
-                                <button>Offer</button>
+                                <button aria-labelledby="table-head-col4-description">Offer</button>
                             </li>
                         </ul>
+                        <span id="table-head-col1-description" aria-hidden="true" class="visually-hidden">Sort Results based on Destination Ascending or Descending</span>
+                        <span id="table-head-col2-description" aria-hidden="true" class="visually-hidden">Sort Results based on Hotel Name Ascending or Descending</span>
+                        <span id="table-head-col3-description" aria-hidden="true" class="visually-hidden">Sort Results based on Date of Expiry Ascending or Descending</span>
+                        <span id="table-head-col4-description" aria-hidden="true" class="visually-hidden">Sort Results based on Offers Range Ascending or Descending</span>
                         <ul class="dealfilter-table-row block-group">
                             <li class="block col-25">
-                                Washington, D.C. , US
+                                <span>Washington, D.C. , US</span>
                             </li>
                             <li class="block col-40">
                                 <button>The Dupont Circle Hotel</button>
                             </li>
                             <li class="block col-15">
-                                Sep 08, 2018
+                                <span>Sep 08, 2018</span>
                             </li>
                             <li class="block col-20">
                                 <button>Save Up To 25%</button>
@@ -155,13 +178,13 @@
                         </ul>
                         <ul class="dealfilter-table-row block-group">
                             <li class="block col-25">
-                                Washington, D.C. , US
+                                <span>Washington, D.C. , US</span>
                             </li>
                             <li class="block col-40">
                                 <button>Omni Shoreham Hotel</button>
                             </li>
                             <li class="block col-15">
-                                Oct 06, 2018
+                                <span>Oct 06, 2018</span>
                             </li>
                             <li class="block col-20">
                                 <button>Save Up To 25%</button>
@@ -169,13 +192,13 @@
                         </ul>
                         <ul class="dealfilter-table-row block-group">
                             <li class="block col-25">
-                                Vienna , Austria
+                                <span>Vienna , Austria</span>
                             </li>
                             <li class="block col-40">
                                 <button>Vienna Sporthotel</button>
                             </li>
                             <li class="block col-15">
-                                Dec 31, 2019
+                                <span>Dec 31, 2019</span>
                             </li>
                             <li class="block col-20">
                                 <button>Save Up To 30%</button>
@@ -183,13 +206,13 @@
                         </ul>
                         <ul class="dealfilter-table-row block-group">
                             <li class="block col-25">
-                                Sanibel Island , US
+                                <span>Sanibel Island , US</span>
                             </li>
                             <li class="block col-40">
                                 <button>Song of The Sea</button>
                             </li>
                             <li class="block col-15">
-                                Jan 11, 2019
+                                <span>Jan 11, 2019</span>
                             </li>
                             <li class="block col-20">
                                 <button>Save Up To 15%</button>
@@ -197,60 +220,59 @@
                         </ul>
                         <ul class="dealfilter-table-row block-group">
                             <li class="block col-25">
-                                Sanibel Island , US
+                                <span>Sanibel Island , US</span>
                             </li>
                             <li class="block col-40">
                                 <button>Sanibel Inn</button>
                             </li>
                             <li class="block col-15">
-                                Dec 19, 2019
+                                <span>Dec 19, 2019</span>
                             </li>
                             <li class="block col-20">
                                 <button>Save Up To 15%</button>
                             </li>
                         </ul>
                         <div class="load-more">
-                            <a href="#" id="load-more-options">Load More</a>
+                            <a href="#" id="load-more-options" aria-labelledby="load-more-description">Load More</a>
+                            <span id="load-more-description" class="visually-hidden" aria-hidden="true">Load More Results</span>
                         </div>
                         <div class="last-highlight load-more">
                             <button aria-labelledby="lastHighlightDescription">
                                 <img src="./assets/last-highlight.jpg" role="presentation">
-                                <span id="lastHighlightDescription">Search for great value car rentals anywhere in the world.</span>
+                                <span id="lastHighlightDescription">Offer to search for great value car rentals anywhere in the world</span>
                             </button>
                         </div>
-
-
                     </div>
                 </div>
             </div>
 
         <footer>
-            <div role="navigation" aria-label="Main Navigation List" class="footer-main-nav">
-                <h3>Main Navigation</h3>
+            <div aria-label="Footer Navigation List" class="footer-main-nav">
+                <h3 aria-hidden="true">Main Navigation</h3>
                 <ul class="footer-main-nav-ul" data-targetarea="parent">
                     <li>
-                        <a href="#Flight" class="js-footer-nav" data-target="title_1">
+                        <a href="#Flight" class="js-footer-nav" data-target="title_1" aria-label="Search For Flights">
                             Flights
                         </a>
                     </li>
                     <li>
-                        <a href="#Hotel" class="js-footer-nav" data-target="title_2">
+                        <a href="#Hotel" class="js-footer-nav" data-target="title_2" aria-label="Search for Hotels">
                             Hotels
                         </a>
                     </li>
                     <li>
-                        <a href="#Car" class="js-footer-nav" data-target="title_3">Cars</a>
+                        <a href="#Car" class="js-footer-nav" data-target="title_3" aria-label="Search for Cars">Cars</a>
                     </li>
                     <li>
-                        <a href="#Activity" class="js-footer-nav" data-target="title_4">Activities</a>
+                        <a href="#Activity" class="js-footer-nav" data-target="title_4" aria-label="Search for Activities">Activities</a>
                     </li>
                     <li>
-                        <a href="#" class="js-footer-nav" data-target="title_5">
+                        <a href="#" class="js-footer-nav" data-target="title_5" aria-label="Search for Cruises">
                             Cruises
                         </a>
                     </li>
                     <li>
-                        <a href="#Deals" class="js-footer-nav" data-target="title_6">
+                        <a href="#Deals" class="js-footer-nav" data-target="title_6" aria-label="Search for Deals">
                             Deals
                         </a>
                     </li>

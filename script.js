@@ -10,6 +10,7 @@ $(document).ready(function () {
 $('.skip-main').focusin(function () {
     // Set border style when `skip-main` gets focus
     $('#main').css('outline', 'auto');
+    $('#main').css('outline-color', '#347aad');
 });
 
 $('.skip-main').focusout(function () {
