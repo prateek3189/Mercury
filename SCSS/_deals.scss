@@ -1,0 +1,522 @@
+﻿.load-more {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    a {
+        text-decoration: none;
+        color: $blueColor;
+    }
+
+    a:focus, a:hover {
+        text-decoration: underline;
+        color: $blueColor;
+    }
+}
+
+/* ---- FOR LARGE SCREENS -----*/
+@media screen and (min-width: 600px) {
+    .container {
+        display: flex;
+        flex-flow: column;
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .offers-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .offers-header {
+            padding-left: 10px;
+            font-family: $fontFamily;
+            width: 80%;
+            color: $blueColor;
+        }
+
+        .offers-btn {
+            width: 20%;
+            margin-top: 25px;
+            text-align: center;
+
+            .btn-link {
+                width: 100%;
+                height: 100%;
+                border-style: none;
+                font-family: $fontFamily;
+            }
+        }
+    }
+
+    .tabular-nav {
+        display: flex;
+        flex-flow: row;
+        padding-bottom: 0.1em;
+        list-style-type: none;
+        padding-left: 0px;
+        justify-content: flex-start;
+        background-color: #11354f;
+        margin-bottom: 0px;
+        color: $whiteColor;
+
+        li {
+            padding: 10px;
+            font-family: $fontFamily;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+
+            a {
+                text-decoration: none;
+                color: $whiteColor;
+            }
+        }
+
+        a:focus, a:hover {
+            background-color: $whiteColor;
+            border-color: $blueColor;
+            color: $blueColor;
+        }
+    }
+
+    .tabular-nav > div > .active {
+        background-color: deepskyblue;
+    }
+
+    #parent {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .carousel ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0px;
+        padding-left: 0px;
+        list-style-type: none;
+        padding: 10px;
+
+        li {
+            width: 30%;
+            padding: 20px;
+
+            button {
+                border: none;
+                background-color: transparent;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .dealfinder-header {
+        background-color: $greyColor;
+        color: #fff;
+        padding-left: 1em;
+        font-size: 0.8rem;
+        font-family: $fontFamily;
+        font-weight: 600;
+
+        h2 {
+            /*margin:0;*/
+        }
+    }
+
+    .dealfinder {
+        display: flex;
+        flex-direction: row;
+        height: 35px;
+        padding: 10px;
+
+        .dealfinder-search-bar {
+            width: 100%;
+
+            #searchDealBar {
+                width: 75%;
+                font-family: $fontFamily;
+                padding-right: 2em;
+                border-style: groove;
+                margin-right: 2em;
+                padding: 5px;
+                color: #757575;
+                font-size: 1rem;
+            }
+
+            #searchDeals {
+                display: none;
+            }
+
+            .dealfinder-search-btn {
+                width: 10%;
+                background-color: $blueColor;
+                color: white;
+                border-style: none;
+                height: 100%;
+                padding: 0px;
+            }
+
+            .dealfinder-search-btn:hover, .dealfinder-search-btn:focus {
+                background-color: cornflowerblue;
+            }
+        }
+    }
+
+    .dealfilter {
+        /*border-style: dotted;*/
+        .dealfilter-heading {
+            width: 100%;
+            font-family: $fontFamily;
+            font-size: 1.125rem;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .dealfilter-panel {
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+
+            .dealfilter-btn {
+                text-transform: uppercase;
+                margin: 0 2px;
+                width: 20%;
+                font-size: 1.1em;
+                border-radius: 0;
+                line-height: 2.2em;
+                padding-left: 1em;
+                padding-right: 1em;
+                background-color: $greyColor;
+                border: 1px solid $greyColor;
+                border-style: none;
+                color: $whiteColor;
+            }
+
+            .dealfilter-btn:hover, .dealfilter-btn:focus, .active {
+                background-color: $blueColor;
+                border: 1px solid $blueColor;
+            }
+        }
+
+        .dealfilter-results {
+            padding: 1rem;
+        }
+
+        .block-group {
+            /*border-style: dotted;*/
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .block {
+            padding: 14px;
+
+            button {
+                font-weight: bold;
+                text-decoration: none;
+                border-style: none;
+                background-color: transparent;
+                font-size: 1rem;
+                color: #5e5e5e;
+            }
+        }
+
+        .col-25 {
+            width: 25%;
+        }
+
+        .col-40 {
+            width: 40%;
+        }
+
+        .col-15 {
+            width: 15%;
+        }
+
+        .col-20 {
+            width: 20%;
+        }
+
+        .dealfilter-table-heading, .dealfilter-table-row {
+            padding-left: 0px;
+            list-style-type: none;
+            border-bottom: 1px solid $greyColor;
+        }
+    }
+
+    .last-highlight {
+
+        button {
+            border-style: none;
+            background-color: transparent;
+        }
+
+        #lastHighlightDescription {
+            display: none;
+        }
+    }
+}
+
+/* ---- FOR Smaller SCREENS -----*/
+@media screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-flow: column;
+        width: 95%;
+        margin: 0px auto;
+    }
+
+    .offers-div {
+        display: flex;
+        flex-direction: row;
+        padding-top: 2rem;
+
+        .offers-header {
+            position: relative;
+            float: left;
+            padding-left: 1.5em;
+            vertical-align: middle;
+            padding-left: 0px;
+            font-family: $fontFamily;
+            width: 80%;
+            color: $blueColor;
+        }
+
+        .offers-btn {
+            width: 20%;
+            margin-top: 35px;
+
+            .btn-link {
+                width: 100%;
+                height: 100%;
+                border-style: none;
+                font-family: $fontFamily;
+            }
+        }
+    }
+
+    .tabular-nav {
+        display: flex;
+        flex-flow: row;
+        padding-bottom: 0.1em;
+        list-style-type: none;
+        padding-left: 0px;
+        justify-content: flex-start;
+        background-color: #11354f;
+        margin-bottom: 0px;
+
+
+        li {
+            padding: 10px;
+            font-family: $fontFamily;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+
+            a {
+                text-decoration: none;
+                color: $whiteColor;
+            }
+
+            a:focus, a:hover {
+                background-color: $whiteColor;
+                border: $blueColor;
+                color: $blueColor;
+            }
+        }
+    }
+
+    .tabular-nav > div > .active {
+        background-color: deepskyblue;
+    }
+
+    #parent {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .carousel ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0px;
+        padding-left: 0px;
+        list-style-type: none;
+        padding: 10px;
+        margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+
+        li {
+            margin-bottom: 0.5em;
+            margin: 0px auto;
+
+            button {
+                border: none;
+                background-color: transparent;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .dealfinder-header {
+        background-color: $greyColor;
+        color: #fff;
+        padding-left: 1em;
+        font-size: 0.800rem;
+        font-family: $fontFamily;
+        font-weight: 600;
+    }
+
+    .dealfinder {
+        display: flex;
+        flex-direction: row;
+        height: 35px;
+        padding: 10px;
+
+        .dealfinder-search-bar {
+            width: 100%;
+
+            #searchDealBar {
+                width: 75%;
+                font-family: $fontFamily;
+                padding-right: 2em;
+                border-style: groove;
+                padding: 5px;
+                color: #757575;
+                font-size: 1rem;
+            }
+
+            #searchDeals {
+                display: none;
+            }
+
+            .dealfinder-search-btn {
+                width: 20%;
+                background-color: #285e86;
+                color: white;
+                border-style: none;
+                height: 100%;
+                padding: 0px;
+            }
+
+            .dealfinder-search-btn:hover, .dealfinder-search-btn:focus {
+                background-color: cornflowerblue;
+            }
+        }
+    }
+
+    .dealfilter {
+        /*border-style: dotted;*/
+        .dealfilter-heading {
+            width: 100%;
+            font-family: $fontFamily;
+            font-size: 1.125rem;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .dealfilter-panel {
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+
+            .dealfilter-btn {
+                text-transform: uppercase;
+                margin: 0 2px;
+                width: 30%;
+                font-size: 1.1em;
+                border-radius: 0;
+                line-height: 2.2em;
+                padding-left: 1em;
+                padding-right: 1em;
+                background-color: $greyColor;
+                border: 1px solid $greyColor;
+                color: $whiteColor;
+            }
+
+            .dealfilter-btn:hover, .dealfilter-btn:focus, .active {
+                background-color: $blueColor;
+                border: 1px solid $blueColor;
+            }
+        }
+
+        .dealfilter-results {
+            /*padding: 1rem;*/
+        }
+
+        .block-group {
+            /*border-style: dotted;*/
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .block {
+            padding: 14px;
+
+            button {
+                font-weight: bold;
+                text-decoration: none;
+                border-style: none;
+                background-color: transparent;
+                font-size: 1rem;
+                color: #5e5e5e;
+            }
+        }
+
+        .col-25 {
+            width: 25%;
+        }
+
+        .col-40 {
+            width: 40%;
+        }
+
+        .col-15 {
+            width: 15%;
+        }
+
+        .col-20 {
+            width: 20%;
+        }
+
+        .dealfilter-table-heading, .dealfilter-table-row {
+            padding-left: 0px;
+            list-style-type: none;
+            border-bottom: 1px solid $greyColor;
+        }
+
+        .dealfilter-table-heading {
+            padding-top: 20px;
+        }
+    }
+
+    .last-highlight {
+
+        button {
+            border-style: none;
+            background-color: transparent;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        #lastHighlightDescription {
+            display: none;
+        }
+    }
+
+}

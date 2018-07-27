@@ -61,55 +61,138 @@
                             <button class="btn-link" aria-label="View Offers">
                                 <a href="#Deals">View Offers</a>
                             </button>
+                        </li>
+                        <li>
+                            <button aria-labelledby="carousel-2">
+                                <img src="./assets/carousel-2.jpg" role="presentation">
+                                <span id="carousel-2">Chhose up to 5 free offers. Up to $500 free onboard spend</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-labelledby="carousel-3">
+                                <img src="./assets/carousel-3.jpg" role="presentation">
+                                <span id="carousel-3">Singapore Airlines - New York to Singapore Starting 12 October</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dealfinder-header">
+                    <h2>DEAL FINDER</h2>
+                </div>
+
+                <div class="dealfinder">
+                    <div class="dealfinder-search-bar">
+                        <input type="text" aria-labelledby="searchDeals" role="textbox" value="Find offer by destination or name" id="searchDealBar" />
+                        <span id="searchDeals">Find offers</span>
+                        <button type="button" aria-label="Search" class="dealfinder-search-btn">SEARCH</button>
+                    </div>
+                </div>
+                <div class="dealfilter">
+                    <div class="dealfilter-heading">
+                        Filter Results
+                    </div>
+                    <div class="dealfilter-panel">
+                        <button class="dealfilter-btn active">Hotel</button>
+                        <button class="dealfilter-btn">Car</button>
+                        <button class="dealfilter-btn">Cruise</button>
+                    </div>
+                    <div class="dealfilter-results">
+                        <ul class="dealfilter-table-heading block-group">
+                            <li class="block col-25">
+                                <button>Destination</button>
+                            </li>
+                            <li class="block col-40">
+                                <button>Name</button>
+                            </li>
+                            <li class="block col-15">
+                                <button>Valid Through</button>
+                            </li>
+                            <li class="block col-20">
+                                <button>Offer</button>
+                            </li>
+                        </ul>
+                        <ul class="dealfilter-table-row block-group">
+                            <li class="block col-25">
+                                Washington, D.C. , US
+                            </li>
+                            <li class="block col-40">
+                                <button>The Dupont Circle Hotel</button>
+                            </li>
+                            <li class="block col-15">
+                                Sep 08, 2018
+                            </li>
+                            <li class="block col-20">
+                                <button>Save Up To 25%</button>
+                            </li>
+                        </ul>
+                        <ul class="dealfilter-table-row block-group">
+                            <li class="block col-25">
+                                Washington, D.C. , US
+                            </li>
+                            <li class="block col-40">
+                                <button>Omni Shoreham Hotel</button>
+                            </li>
+                            <li class="block col-15">
+                                Oct 06, 2018
+                            </li>
+                            <li class="block col-20">
+                                <button>Save Up To 25%</button>
+                            </li>
+                        </ul>
+                        <ul class="dealfilter-table-row block-group">
+                            <li class="block col-25">
+                                Vienna , Austria
+                            </li>
+                            <li class="block col-40">
+                                <button>Vienna Sporthotel</button>
+                            </li>
+                            <li class="block col-15">
+                                Dec 31, 2019
+                            </li>
+                            <li class="block col-20">
+                                <button>Save Up To 30%</button>
+                            </li>
+                        </ul>
+                        <ul class="dealfilter-table-row block-group">
+                            <li class="block col-25">
+                                Sanibel Island , US
+                            </li>
+                            <li class="block col-40">
+                                <button>Song of The Sea</button>
+                            </li>
+                            <li class="block col-15">
+                                Jan 11, 2019
+                            </li>
+                            <li class="block col-20">
+                                <button>Save Up To 15%</button>
+                            </li>
+                        </ul>
+                        <ul class="dealfilter-table-row block-group">
+                            <li class="block col-25">
+                                Sanibel Island , US
+                            </li>
+                            <li class="block col-40">
+                                <button>Sanibel Inn</button>
+                            </li>
+                            <li class="block col-15">
+                                Dec 19, 2019
+                            </li>
+                            <li class="block col-20">
+                                <button>Save Up To 15%</button>
+                            </li>
+                        </ul>
+                        <div class="load-more">
+                            <a href="#" id="load-more-options">Load More</a>
+                        </div>
+                        <div class="last-highlight load-more">
+                            <button aria-labelledby="lastHighlightDescription">
+                                <img src="./assets/last-highlight.jpg" role="presentation">
+                                <span id="lastHighlightDescription">Search for great value car rentals anywhere in the world.</span>
+                            </button>
                         </div>
 
-                        <div class="flex-container">
-                            <div class="nav-option">
-                                <span>
-                                    <a href="#Flight" onclick="showHideDiv(this.innerHTML)">Flight</a>
-                                </span>
-                            </div>
-                            <div class="nav-option">
-                                <span>
-                                    <a href="#Hotel" onclick="showHideDiv(this.innerHTML)">Hotel</a>
-                                </span>
-                            </div>
-                            <div class="nav-option">
-                                <span>
-                                    <a href="#Car" onclick="showHideDiv(this.innerHTML)">Cars</a>
-                                </span>
-                            </div>
-                            <div class="nav-option">
-                                <span>
-                                    <a href="#Activity" onclick="showHideDiv(this.innerHTML)">Activities</a>
-                                </span>
-                            </div>
-                        </div>
-                        <div id="main" role="main">
-                            <section id="Flight">
-                                <span>
-                                    Search for Flights
-                                </span>
-                            </section>
-                            <section id="Hotel">
-                                <span>
-                                    My Hotel Element
-                                </span>
-                            </section>
-                            <section id="Car">
-                                My Cars Element
-                            </section>
-                            <section id="Activity">
-                                <span>
-                                    My Activities Element
-                                </span>
-                            </section>
-                            <section id="Deals">
-                                <span>
-                                    My Deals
-                                </span>
-                            </section>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -118,43 +201,43 @@
         <!-- <footer class="footer">
             <div role="navigation" aria-label="Main Navigation List" class="footer-navigation-links-left">
                 <h3>Main Navigation</h3>
-                <ul id="js-footer-nav-container">
+                <ul class="footer-main-nav-ul" data-targetarea="parent">
                     <li>
-                        <a data-key="flight" href="#Flight" class="js-footer-nav" onclick="showHideDiv('Flight')">
+                        <a href="#Flight" class="js-footer-nav" data-target="title_1">
                             Flights
                         </a>
                     </li>
                     <li>
-                        <a data-key="hotel" href="#Hotel" class="js-footer-nav" onclick="showHideDiv('Hotel')">
+                        <a href="#Hotel" class="js-footer-nav" data-target="title_2">
                             Hotels
                         </a>
                     </li>
                     <li>
-                        <a data-key="car" href="#Car" class="js-footer-nav" onclick="showHideDiv(this.innerHTML)">Cars</a>
+                        <a href="#Car" class="js-footer-nav" data-target="title_3">Cars</a>
                     </li>
                     <li>
-                        <a data-key="activity" href="#Activity" class="js-footer-nav" onclick="showHideDiv(this.innerHTML)">Activities</a>
+                        <a href="#Activity" class="js-footer-nav" data-target="title_4">Activities</a>
                     </li>
                     <li>
-                        <a data-key="cruise" href="#" class="js-footer-nav" data-qaid="Link_cruise">
+                        <a href="#" class="js-footer-nav" data-target="title_5">
                             Cruises
                         </a>
                     </li>
                     <li>
-                        <a data-key="deals" href="#Deals" class="js-footer-nav" data-qaid="Link_deals">
+                        <a href="#Deals" class="js-footer-nav" data-target="title_6">
                             Deals
                         </a>
                     </li>
                 </ul>
             </div>
-            <div role="navigation" aria-label="Other Links List" class="footer-navigation-links-right">
+            <div role="navigation" aria-label="Other Links List" class="footer-other-links">
                 <h3>Other Links</h3>
                 <ul>
-                    <li><button data-content="faq" data-display="panel" class="js-other-links btn-link" data-qaid="Link_FAQs" type="button">Frequently Asked Questions</button></li>
-                    <li><button data-content="selleroftravel" data-display="panel" class="js-other-links btn-link" data-qaid="Link_SellerOfTravel" type="button">Seller of Travel</button></li>
-                    <li><button data-content="websiteterms" data-display="panel" class="js-other-links btn-link" data-qaid="Link_WebsiteTerms" type="button">Website Terms of Use</button></li>
-                    <li><button data-content="travelterms" data-display="panel" class="js-other-links btn-link" data-qaid="Link_TravelTerms" type="button">Travel Terms &amp; Conditions</button></li>
-                    <li><button data-content="privacypolicy" data-display="panel" class="js-other-links btn-link" data-qaid="Link_PrivacyPolicy" type="button">Privacy Policy</button></li>
+                    <li><button data-content="faq" type="button">Frequently Asked Questions</button></li>
+                    <li><button data-content="selleroftravel" type="button">Seller of Travel</button></li>
+                    <li><button data-content="websiteterms" type="button">Website Terms of Use</button></li>
+                    <li><button data-content="travelterms" type="button">Travel Terms &amp; Conditions</button></li>
+                    <li><button data-content="privacypolicy" type="button">Privacy Policy</button></li>
                 </ul>
             </div>
         </footer> -->

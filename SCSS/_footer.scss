@@ -1,18 +1,15 @@
 ﻿/* Footer CSS */
 footer {
-    -ms-flex: 0 1 auto;
-    -webkit-flex: 0 1 auto;
     flex: 0 1 auto;
     display: flex;
     background-color: $primaryBlue;
     padding: 2px;
     margin-top: 2em;
-}
 
-footer > div {
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-}
+    div {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
 
 footer h3 {
     color: $white;
@@ -26,14 +23,14 @@ footer a {
     padding: 2px;
 }
 
-footer ul {
-    list-style-type: none;
-    padding: 3px;
-}
+    ul {
+        list-style-type: none;
+        padding: 3px;
+    }
 
-footer ul li {
-    padding: 3px;
-}
+    ul li {
+        padding: 3px;
+    }
 
 footer button {
     color: $white;
@@ -42,17 +39,18 @@ footer button {
     fontFamily: $fontFamily;
 }
 
-.footer-navigation-links-left, .footer-navigation-links-right {
+
+.footer-main-nav, .footer-other-links {
     float: left;
     min-height: 250px;
 }
 
-.footer-navigation-links-left {
+.footer-main-nav {
     width: 40%;
     background-color: $primaryBlue;
 }
 
-.footer-navigation-links-right {
+.footer-other-links {
     width: 59%;
     background-color: $primaryBlue;
 }
