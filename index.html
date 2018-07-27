@@ -8,22 +8,21 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     </script>
     <![endif]-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
+    <script src="js/lib/jquery.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="main-container">
+        <a href="#main" class="skip-main">Skip to main content</a>
         <header>
-            <a href="#main" class="skip-main">Skip to main content</a>
-            <div class="header-branding">
-                <a href="./abc.html" title="Return To Home">
-                    <h1>Mercury Logo</h1>
+            <div class="header-logo">
+                <a href="./index.html" title="Return To Home">
+                    <img src="images/logo.png" alt="Logo" width="120" height="70">
                 </a>
             </div>
             <div class="header-member-info">
                 <div class="header-member-info-content">
-                    <span>John Smith</span><br />
+                    <span>John Smith</span>
                     <span class="js-header-available-points">500,000 Points</span>
                 </div>
                 <div class="member-navigation">
@@ -35,58 +34,32 @@
                     </ul>
                 </div>
             </div>
-            <div id="rightcolumn">
-                <label id="header-itinerary-info" class="visually-hidden">Expand to select itinerary items.</label>
+            <div class="rightcolumn">
                 <button type="button" class="header-itinerary" aria-describedby="header-itinerary-info">
                     My Itinerary
                 </button>
             </div>
-            <div>
-                <nav id="navbar" role="navigation" aria-label="main navigation" data-targetarea="parent">
-                    <ul style="padding-top: 0px;">
-                        <li><a href="#Flight" class="active" data-target="title_1">Flight</a></li>
-                        <li><a href="#Hotel" data-target="title_2">Hotel</a></li>
-                        <li><a href="#Car" data-target="title_3">Cars</a></li>
-                        <li><a href="#Activity" data-target="title_4">Activities</a></li>
-                        <li><a href="#" data-target="title_5">Cruise Specials</a></li>
-                        <li><a href="#Deals" data-target="title_6">Deals</a></li>
-                    </ul>
-                </nav>
-            </div>
         </header>
-
-
-    <div class="container-fluid">
-            <div class="container">
-                <div class="offers-div">
-                    <div class="offers-header">
-                        <h2 id="offers-heading" aria-hidden="true">Spread your wings and discover new destinations!</h2>
-                    </div>
-                    <div class="offers-btn">
-                        <a href="#Deals" class="btn-link" aria-label="View Offers" >View Offers</a>
-                    </div>
-                </div>
-                <div id="main">
-                    <ul class="tabular-nav" data-targetarea="parent">
-                        <li class="tabular-nav-option"><a href="#Flight" class="active" data-target="title_1">Flight</a></li>
-                        <li class="tabular-nav-option"><a href="#Hotel" data-target="title_2">Hotels</a></li>
-                        <li class="tabular-nav-option"><a href="#Car" data-target="title_3">Cars</a></li>
-                        <li class="tabular-nav-option"><a href="#Activity" data-target="title_4">Activity</a></li>
-                    </ul>
-                    <div class="tabular-form" id="parent">
-                        <div id="title_1" class="Flight">Flights DIV</div>
-                        <div id="title_2" class="Hotel">Hotels DIV</div>
-                        <div id="title_3" class="Car">Cars DIV</div>
-                        <div id="title_4" class="Activity">Activity DIV</div>
-                    </div>
-                </div>
-
-                <div class="carousel">
-                    <ul>
-                        <li>
-                            <button aria-labelledby="carousel-1">
-                                <img src="./assets/carousel-1.jpg" role="presentation">
-                                <span id="carousel-1">Search for great value car rentals anywhere in the world</span>
+        <nav id="navbar" role="navigation" aria-label="main navigation">
+            <ul style="padding-top: 0px;">
+                <li><a href="#Flight" onclick="showHideDiv(this.innerHTML)">Flight</a></li>
+                <li><a href="#Hotel" onclick="showHideDiv(this.innerHTML)">Hotel</a></li>
+                <li><a href="#Car" onclick="showHideDiv(this.innerHTML)">Cars</a></li>
+                <li><a href="#Activity" onclick="showHideDiv(this.innerHTML)">Activities</a></li>
+                <li><a href="#">Cruise Specials</a></li>
+                <li><a href="#Deals">Deals</a></li>
+            </ul>
+        </nav>
+        <!-- <div class="boxContent">
+            <div class="offers-div">
+                <div class="banner">
+                    <div class="marketing-text-banner" aria-labelledby="offers-heading">
+                        <div class="text">
+                            <h2 id="offers-heading">Spread your wings and discover new destinations!</h2>
+                        </div>
+                        <div class="cta">
+                            <button class="btn-link" aria-label="View Offers">
+                                <a href="#Deals">View Offers</a>
                             </button>
                         </li>
                         <li>
@@ -103,7 +76,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="dealfinder-header">
                     <h2>DEAL FINDER</h2>
                 </div>
@@ -223,9 +196,10 @@
                     </div>
                 </div>
             </div>
+        </div> -->
 
-        <footer>
-            <div role="navigation" aria-label="Main Navigation List" class="footer-main-nav">
+        <!-- <footer class="footer">
+            <div role="navigation" aria-label="Main Navigation List" class="footer-navigation-links-left">
                 <h3>Main Navigation</h3>
                 <ul class="footer-main-nav-ul" data-targetarea="parent">
                     <li>
@@ -266,11 +240,7 @@
                     <li><button data-content="privacypolicy" type="button">Privacy Policy</button></li>
                 </ul>
             </div>
-        </footer>
-        <div class="block footer-copyright-container">
-            <span>© 2018 Connexions Loyalty, Inc.</span>
-        </div>
-
+        </footer> -->
     </div>
     <script type="text/javascript" src="./script.js"></script>
 </body>

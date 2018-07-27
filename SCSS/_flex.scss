@@ -1,0 +1,40 @@
+﻿/* Flexbox CSS */
+/* Flex Referred from: http://jsfiddle.net/MUrPj/14/ */
+.boxContent {
+    flex: 1 0 auto;
+}
+
+.boxFooter {
+    flex: 0 1 auto;
+}
+
+/* ---- FOR SMALL SCREENS ----- */
+@media screen and (max-width: 992px) {
+    .flex-container > div {
+        margin: 5px;
+        display: inline-block;
+        line-height: 35px;
+        font-size: 1.1em;
+    }
+
+    .flex-container > div > span > a {
+        text-decoration: none;
+        color: $primaryBlue;
+    }
+}
+
+/* ---- FOR LARGE SCREENS -----*/
+@media screen and (min-width: 600px) {
+    .flex-container div {
+        margin: 5px;
+        display: inline-block;
+        text-align: center;
+        line-height: 35px;
+        font-size: 1.1em;
+    }
+
+    .flex-container > div > span > a {
+        text-decoration: none;
+        color: $primaryBlue;
+    }
+}

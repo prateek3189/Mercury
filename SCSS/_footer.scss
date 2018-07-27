@@ -2,7 +2,7 @@
 footer {
     flex: 0 1 auto;
     display: flex;
-    background-color: $blueColor;
+    background-color: $primaryBlue;
     padding: 2px;
     margin-top: 2em;
 
@@ -11,17 +11,17 @@ footer {
         flex-wrap: nowrap;
     }
 
-    h3 {
-        color: $whiteColor;
-        padding-left: 5px;
-        padding-bottom: 2px;
-    }
+footer h3 {
+    color: $white;
+    padding-left: 5px;
+    padding-bottom: 2px;
+}
 
-    a {
-        color: $whiteColor;
-        text-decoration: none;
-        padding: 2px;
-    }
+footer a {
+    color: $white;
+    text-decoration: none;
+    padding: 2px;
+}
 
     ul {
         list-style-type: none;
@@ -32,12 +32,11 @@ footer {
         padding: 3px;
     }
 
-    button {
-        color: $whiteColor;
-        border-color: transparent;
-        background-color: transparent;
-        fontFamily: $fontFamily;
-    }
+footer button {
+    color: $white;
+    border-color: transparent;
+    background-color: transparent;
+    fontFamily: $fontFamily;
 }
 
 
@@ -48,17 +47,10 @@ footer {
 
 .footer-main-nav {
     width: 40%;
-    background-color: $blueColor;
+    background-color: $primaryBlue;
 }
 
 .footer-other-links {
     width: 59%;
-    background-color: $blueColor;
-}
-
-.footer-copyright-container {
-    padding: 1em 2em;
-    background-color: #dedede;
-    font-size: .875em;
-    color: $blueColor;
+    background-color: $primaryBlue;
 }
