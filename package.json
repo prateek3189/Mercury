@@ -5,12 +5,14 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass:compile": "node-sass SCSS/main.scss style.css"
+    "sass:compile": "node-sass --include-path scss SCSS/main.scss style.css",
+    "sass:watch": "nodemon -e scss -x \"npm run sass:compile\""
   },
   "author": "Abhay Bhosale",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.4.0",
-    "node-sass": "^4.9.2"
+    "node-sass": "^4.9.2",
+    "nodemon": "^1.18.3"
   }
 }
