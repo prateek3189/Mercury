@@ -1,56 +1,6 @@
 ﻿/* Footer CSS */
 footer {
-    flex: 0 1 auto;
-    display: flex;
-    background-color: $primaryBlue;
-    padding: 2px;
-    margin-top: 2em;
-
-    div {
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-    }
-
-footer h3 {
-    color: $white;
-    padding-left: 5px;
-    padding-bottom: 2px;
-}
-
-footer a {
-    color: $white;
-    text-decoration: none;
-    padding: 2px;
-}
-
-    ul {
-        list-style-type: none;
-        padding: 3px;
-    }
-
-    ul li {
-        padding: 3px;
-    }
-
-footer button {
-    color: $white;
-    border-color: transparent;
-    background-color: transparent;
-    fontFamily: $fontFamily;
-}
-
-
-.footer-main-nav, .footer-other-links {
-    float: left;
-    min-height: 250px;
-}
-
-.footer-main-nav {
-    width: 40%;
-    background-color: $primaryBlue;
-}
-
-.footer-other-links {
-    width: 59%;
-    background-color: $primaryBlue;
+    background-color: $grayDe;
+    padding: 1em 2em;
+    color: $primaryBlue;
 }

@@ -59,7 +59,7 @@
         justify-content: flex-start;
         background-color: #11354f;
         margin-bottom: 0px;
-        color: $whiteColor;
+        color: $white;
 
         li {
             padding: 10px;
@@ -71,12 +71,12 @@
 
             a {
                 text-decoration: none;
-                color: $whiteColor;
+                color: $white;
             }
         }
 
         a:focus, a:hover {
-            background-color: $whiteColor;
+            background-color: $white;
             border-color: $blueColor;
             color: $blueColor;
         }
@@ -116,7 +116,7 @@
     }
 
     .dealfinder-header {
-        background-color: $greyColor;
+        background-color: $darkGrey;
         color: #fff;
         padding-left: 1em;
         font-size: 0.8rem;
@@ -191,10 +191,10 @@
                 line-height: 2.2em;
                 padding-left: 1em;
                 padding-right: 1em;
-                background-color: $greyColor;
-                border: 1px solid $greyColor;
+                background-color: $darkGrey;
+                border: 1px solid $darkGrey;
                 border-style: none;
-                color: $whiteColor;
+                color: $white;
             }
 
             .dealfilter-btn:hover, .dealfilter-btn:focus, .active {
@@ -246,7 +246,7 @@
         .dealfilter-table-heading, .dealfilter-table-row {
             padding-left: 0px;
             list-style-type: none;
-            border-bottom: 1px solid $greyColor;
+            border-bottom: 1px solid $darkGrey;
         }
     }
 
@@ -322,11 +322,11 @@
 
             a {
                 text-decoration: none;
-                color: $whiteColor;
+                color: $white;
             }
 
             a:focus, a:hover {
-                background-color: $whiteColor;
+                background-color: $white;
                 border: $blueColor;
                 color: $blueColor;
             }
@@ -371,7 +371,7 @@
     }
 
     .dealfinder-header {
-        background-color: $greyColor;
+        background-color: $darkGrey;
         color: #fff;
         padding-left: 1em;
         font-size: 0.800rem;
@@ -441,9 +441,9 @@
                 line-height: 2.2em;
                 padding-left: 1em;
                 padding-right: 1em;
-                background-color: $greyColor;
-                border: 1px solid $greyColor;
-                color: $whiteColor;
+                background-color: $darkGrey;
+                border: 1px solid $darkGrey;
+                color: $white;
             }
 
             .dealfilter-btn:hover, .dealfilter-btn:focus, .active {
@@ -495,7 +495,7 @@
         .dealfilter-table-heading, .dealfilter-table-row {
             padding-left: 0px;
             list-style-type: none;
-            border-bottom: 1px solid $greyColor;
+            border-bottom: 1px solid $darkGrey;
         }
 
         .dealfilter-table-heading {

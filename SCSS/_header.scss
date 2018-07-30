@@ -62,37 +62,30 @@ nav {
     width: 100%;
 }
 
-nav ul {
-    margin-top: 0px;
-    padding-left: 0px;
-    margin-left: 0px;
-    list-style-type: none;
-    line-height: 1.42857143;
-}
+nav {
+    ul {
+        display: flex;
 
-nav ul li {
-    display: inline-block;
-    margin: 1px;
-    padding: 2px;
-    font-size: 18px;
-    background-color: $white;
-    vertical-align: top;
-}
+        li {
+            background-color: $white;
+            vertical-align: top;
 
-nav > ul > li > a:focus {
-    background-color: transparent;
-    border: 1px solid $primaryBlue;
-}
+            a {
+                color: $primaryBlue;
+                padding: 1em;
+                display: block;
 
-nav ul li ul {
-    display: none;
-    margin: 5px;
-    font-size: 18px;
-}
+                &:hover, &.selected {
+                    background-color: $primaryBlue;
+                    color: $white;
+                }
 
-nav ul li a, nav ul li ul li a {
-    color: $primaryBlue;
-    text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
 
 /* ---- FOR SMALL SCREENS ----- */

@@ -3,7 +3,12 @@
 }
 
 a {
+    color: $primaryBlue;
     text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 body {
@@ -23,4 +28,35 @@ button {
     background-color: $primaryBlue;
     color: $white;
     border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    &[type=text],
+    &[type=date],
+    &[type=number],
+    &[type=search], {
+        font-size: 1rem;
+        background: $white;
+        border: 1px solid $lightGray;
+        color: $lightGray;
+        height: 2.3rem;
+        padding: 7px;
+        width: 95%;
+
+        &::placeholder {
+            color: $grayC;
+        }
+    }
+}
+
+label {
+    text-transform: capitalize;
+    color: $lightGray;
+    font-weight: 600;
+    line-height: 1.8em;
 }

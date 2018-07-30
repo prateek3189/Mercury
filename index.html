@@ -42,7 +42,7 @@
         </header>
         <nav id="navbar" role="navigation" aria-label="main navigation">
             <ul style="padding-top: 0px;">
-                <li><a href="#Flight" onclick="showHideDiv(this.innerHTML)">Flight</a></li>
+                <li><a class="selected" href="#Flight" onclick="showHideDiv(this.innerHTML)">Flight</a></li>
                 <li><a href="#Hotel" onclick="showHideDiv(this.innerHTML)">Hotel</a></li>
                 <li><a href="#Car" onclick="showHideDiv(this.innerHTML)">Cars</a></li>
                 <li><a href="#Activity" onclick="showHideDiv(this.innerHTML)">Activities</a></li>
@@ -50,197 +50,278 @@
                 <li><a href="#Deals">Deals</a></li>
             </ul>
         </nav>
-        <!-- <div class="boxContent">
-            <div class="offers-div">
-                <div class="banner">
-                    <div class="marketing-text-banner" aria-labelledby="offers-heading">
-                        <div class="text">
-                            <h2 id="offers-heading">Spread your wings and discover new destinations!</h2>
-                        </div>
-                        <div class="cta">
-                            <button class="btn-link" aria-label="View Offers">
-                                <a href="#Deals">View Offers</a>
-                            </button>
+        <div class="top-banner-form">
+            <div class="main-layout">
+                <div class="marketing-text-banner" aria-labelledby="offers-heading">
+                    <div class="text">
+                        <h2 id="offers-heading">Spread your wings and discover new destinations!</h2>
+                        <a href="#">View Offer</a>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <ul class="search-navigation">
+                        <li class="selected">
+                            <a href="#">
+                                <svg viewBox="0 0 100 100" id="icon-flight" width="100%" height="100%">
+                                    <title>Flight</title>
+                                    <path d="M94.266,5.756c1.877,2.272,2.148,5.515,0.818,9.737c-1.328,4.222-3.711,7.978-7.152,11.263L77.373,37.315l10.559,45.513 c0.232,0.863-0.041,1.567-0.82,2.114l-8.332,6.333c-0.313,0.235-0.74,0.353-1.289,0.353h-0.473c-0.623-0.156-1.094-0.51-1.406-1.055	L57.43,57.257L40.421,74.266l3.521,12.667c0.235,0.785,0.037,1.491-0.586,2.114l-6.217,6.22c-0.395,0.388-0.902,0.584-1.528,0.584	h-0.116c-0.706-0.078-1.253-0.354-1.641-0.819L21.532,78.488L4.994,66.172c-0.469-0.31-0.745-0.78-0.821-1.408	c-0.08-0.623,0.116-1.212,0.586-1.759l6.334-6.337c0.388-0.388,0.859-0.585,1.406-0.585h0.586l12.671,3.52l17.01-17.009L9.45,24.411	c-0.625-0.392-0.979-0.939-1.055-1.644c-0.079-0.702,0.118-1.291,0.587-1.759l8.329-8.33c0.625-0.545,1.29-0.742,1.994-0.585	l43.523,10.44l10.441-10.44c3.359-3.285,7.115-5.63,11.26-7.04C88.674,3.646,91.918,3.882,94.266,5.756z"></path>
+                                </svg><span>Flight</span>
+                            </a>
                         </li>
                         <li>
-                            <button aria-labelledby="carousel-2">
-                                <img src="./assets/carousel-2.jpg" role="presentation">
-                                <span id="carousel-2">Chhose up to 5 free offers. Up to $500 free onboard spend</span>
-                            </button>
+                            <a href="#">
+                                <svg viewBox="0 0 100 100" id="icon-hotel" width="100%" height="100%">
+                                    <title>Hotel</title>
+                                    <path d="M79.146,39.433H35.757c0.047,0.52,0.083,1.044,0.083,1.578c0,10.14-8.446,18.385-18.828,18.385 c-3.271,0-6.598,0.057-9.63,0.015v8.069h88.443V53.834C95.824,53.834,94.561,39.433,79.146,39.433z"></path>
+                                    <ellipse cx="17.012" cy="41.01" rx="12.887" ry="12.444"></ellipse>
+                                    <path d="M94.664,74.486c-0.821-0.915-1.996-1.505-3.319-1.505H11.859c-1.321,0-2.499,0.59-3.317,1.505	C7.828,75,7.381,75.775,7.381,76.964v0.532v15.187c0,2.662,2.156,3.331,4.814,3.331c2.661,0,4.816-0.669,4.816-3.331V82.008h69.184	v10.675c0,2.662,2.155,3.331,4.812,3.331c2.662,0,4.817-0.669,4.817-3.331V77.496v-0.532C95.824,75.775,95.378,75,94.664,74.486z"></path>
+                                </svg><span>Hotel</span>
+                            </a>
                         </li>
                         <li>
-                            <button aria-labelledby="carousel-3">
-                                <img src="./assets/carousel-3.jpg" role="presentation">
-                                <span id="carousel-3">Singapore Airlines - New York to Singapore Starting 12 October</span>
-                            </button>
+                            <a href="#">
+                                <svg viewBox="0 0 100 100" id="icon-car" width="100%" height="100%">
+                                    <title>Car</title>
+                                    <path d="M85.867,55.738h-0.517l-7.056-17.643c-3.249-7.082-4.459-13.048-9.954-13.048h-2.37H33.978h-2.37	c-5.496,0-6.702,5.967-9.955,13.048l-7.055,17.643h-0.519c-5.497,0-9.954,4.455-9.954,9.956v6.001c0,4.567,3.073,8.412,7.262,9.586 c-0.058,0.38-0.086,0.773-0.086,1.17v5.58c0,4.404,3.572,7.977,7.975,7.977c4.405,0,7.975-3.572,7.975-7.977v-5.58	c0-0.271-0.014-0.535-0.04-0.798h45.53c-0.024,0.263-0.041,0.527-0.041,0.798v5.58c0,4.404,3.57,7.977,7.971,7.977	c4.406,0,7.977-3.572,7.977-7.977v-5.58c0-0.396-0.028-0.79-0.085-1.17c4.19-1.176,7.265-5.021,7.265-9.586v-6.001	C95.825,60.193,91.368,55.738,85.867,55.738z M87.907,68.696c0,2.977-2.412,5.39-5.391,5.39c-2.954,0-5.347-2.37-5.387-5.31	c0-0.026-0.005-0.053-0.005-0.08c0-2.979,2.411-5.395,5.392-5.395c0.376,0,0.738,0.038,1.092,0.109	C86.063,63.918,87.907,66.091,87.907,68.696z M26.852,52.117l3.855-10.832c2.216-4.406,3.038-8.118,6.785-8.118h1.611h21.798h1.615	c3.745,0,4.567,3.712,6.782,8.118l3.855,10.832c0,2.496-0.631,3.353-1.837,3.621c-0.96,0.213-2.284,0.057-3.946,0.057h-6.47H39.103	h-6.467c-1.663,0-2.987,0.156-3.949-0.057C27.484,55.47,26.852,54.613,26.852,52.117z M16.341,63.411	c0.352-0.071,0.716-0.109,1.09-0.109c2.979,0,5.391,2.415,5.391,5.395c0,0.027-0.002,0.054-0.004,0.08	c-0.041,2.939-2.437,5.31-5.387,5.31c-2.979,0-5.392-2.413-5.392-5.39C12.039,66.091,13.884,63.918,16.341,63.411z">
+                                    </path>
+                                </svg><span>Car</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 100 100" id="icon-activity" width="100%" height="100%">
+                                    <title>Activity</title>
+                                    <path d="M91.871,63.894h0.009l-0.545-0.952l-8.018-13.136c-0.243-0.445-0.51-0.881-0.794-1.301v-0.001	c-1.787-2.635-4.332-4.716-7.318-5.935c-0.143-4.85-4.108-8.74-8.994-8.74c-4.976,0-9.008,4.032-9.008,9.007	c0,1.105,0.209,2.156,0.573,3.134c-1.898,1.845-3.345,4.149-4.161,6.734c-0.921-1.263-2.408-2.086-4.092-2.086	c-1.379,0-2.628,0.551-3.542,1.449c-0.847-2.327-2.208-4.403-3.946-6.096c0.362-0.978,0.571-2.029,0.571-3.134	c0-4.975-4.034-9.007-9.007-9.007c-4.886,0-8.854,3.89-8.994,8.74c-2.988,1.219-5.532,3.3-7.318,5.935v0.001	c-0.286,0.42-0.551,0.856-0.794,1.301l-8.02,13.136l-0.542,0.952h0.004c-2.394,3.329-3.811,7.414-3.811,11.828	c0,11.204,9.085,20.288,20.289,20.288c9.782,0,17.948-6.926,19.862-16.141c1.268,1.48,3.147,2.42,5.249,2.42	c2.472,0,4.635-1.301,5.859-3.25c1.584,9.626,9.939,16.971,20.015,16.971c11.202,0,20.286-9.084,20.286-20.288	C95.684,71.308,94.268,67.223,91.871,63.894z M24.438,91.181c-8.238,0-14.916-6.677-14.916-14.915c0-8.24,6.678-14.92,14.916-14.92	c8.239,0,14.917,6.68,14.917,14.92C39.355,84.504,32.676,91.181,24.438,91.181z M49.253,78.071c-1.827,0-3.308-1.48-3.308-3.308	c0-1.829,1.481-3.313,3.308-3.313c1.83,0,3.314,1.484,3.314,3.313C52.567,76.591,51.083,78.071,49.253,78.071z M76.023,91.181	c-8.239,0-14.917-6.677-14.917-14.915c0-8.24,6.678-14.92,14.917-14.92c8.241,0,14.917,6.68,14.917,14.92	C90.94,84.504,84.265,91.181,76.023,91.181z"></path>
+                                    <path d="M23.313,64.351l-0.123-0.002c-1.521,0-2.756,1.193-2.81,2.719c-0.033,0.749,0.234,1.471,0.747,2.024	s1.211,0.874,1.965,0.902c0.806,0.033,7.848,0.55,7.82,9.202c-0.002,0.755,0.29,1.465,0.824,2c0.531,0.537,1.241,0.833,1.995,0.835	c1.56,0,2.826-1.264,2.832-2.818C36.606,65.078,23.445,64.356,23.313,64.351z M22.887,65.721c0.1-0.023,0.196-0.06,0.302-0.06 c0.021,0,0.043,0,0.067,0C23.126,65.654,23.009,65.695,22.887,65.721z"></path>
+                                    <path d="M74.848,64.351l-0.121-0.002c-1.523,0-2.758,1.193-2.812,2.719c-0.033,0.749,0.233,1.471,0.746,2.024	s1.212,0.874,1.967,0.902c0.805,0.033,7.845,0.55,7.82,9.202c-0.004,0.755,0.289,1.465,0.822,2c0.531,0.537,1.241,0.833,1.996,0.835	c1.559,0,2.826-1.264,2.832-2.818C88.144,65.078,74.979,64.356,74.848,64.351z M74.423,65.721c0.101-0.023,0.193-0.06,0.304-0.06	c0.021,0,0.043,0,0.065,0C74.661,65.654,74.544,65.695,74.423,65.721z"></path>
+                                </svg><span>Activity</span>
+                            </a>
                         </li>
                     </ul>
-                </div>
-
-                <div class="dealfinder-header">
-                    <h2>DEAL FINDER</h2>
-                </div>
-
-                <div class="dealfinder">
-                    <div class="dealfinder-search-bar">
-                        <input type="text" aria-labelledby="searchDeals" role="textbox" value="Find offer by destination or name" id="searchDealBar" />
-                        <span id="searchDeals">Find offers</span>
-                        <button type="button" aria-label="Search" class="dealfinder-search-btn">SEARCH</button>
-                    </div>
-                </div>
-                <div class="dealfilter">
-                    <div class="dealfilter-heading">
-                        Filter Results
-                    </div>
-                    <div class="dealfilter-panel">
-                        <button class="dealfilter-btn active">Hotel</button>
-                        <button class="dealfilter-btn">Car</button>
-                        <button class="dealfilter-btn">Cruise</button>
-                    </div>
-                    <div class="dealfilter-results">
-                        <ul class="dealfilter-table-heading block-group">
-                            <li class="block col-25">
-                                <button>Destination</button>
-                            </li>
-                            <li class="block col-40">
-                                <button>Name</button>
-                            </li>
-                            <li class="block col-15">
-                                <button>Valid Through</button>
-                            </li>
-                            <li class="block col-20">
-                                <button>Offer</button>
-                            </li>
-                        </ul>
-                        <ul class="dealfilter-table-row block-group">
-                            <li class="block col-25">
-                                Washington, D.C. , US
-                            </li>
-                            <li class="block col-40">
-                                <button>The Dupont Circle Hotel</button>
-                            </li>
-                            <li class="block col-15">
-                                Sep 08, 2018
-                            </li>
-                            <li class="block col-20">
-                                <button>Save Up To 25%</button>
-                            </li>
-                        </ul>
-                        <ul class="dealfilter-table-row block-group">
-                            <li class="block col-25">
-                                Washington, D.C. , US
-                            </li>
-                            <li class="block col-40">
-                                <button>Omni Shoreham Hotel</button>
-                            </li>
-                            <li class="block col-15">
-                                Oct 06, 2018
-                            </li>
-                            <li class="block col-20">
-                                <button>Save Up To 25%</button>
-                            </li>
-                        </ul>
-                        <ul class="dealfilter-table-row block-group">
-                            <li class="block col-25">
-                                Vienna , Austria
-                            </li>
-                            <li class="block col-40">
-                                <button>Vienna Sporthotel</button>
-                            </li>
-                            <li class="block col-15">
-                                Dec 31, 2019
-                            </li>
-                            <li class="block col-20">
-                                <button>Save Up To 30%</button>
-                            </li>
-                        </ul>
-                        <ul class="dealfilter-table-row block-group">
-                            <li class="block col-25">
-                                Sanibel Island , US
-                            </li>
-                            <li class="block col-40">
-                                <button>Song of The Sea</button>
-                            </li>
-                            <li class="block col-15">
-                                Jan 11, 2019
-                            </li>
-                            <li class="block col-20">
-                                <button>Save Up To 15%</button>
-                            </li>
-                        </ul>
-                        <ul class="dealfilter-table-row block-group">
-                            <li class="block col-25">
-                                Sanibel Island , US
-                            </li>
-                            <li class="block col-40">
-                                <button>Sanibel Inn</button>
-                            </li>
-                            <li class="block col-15">
-                                Dec 19, 2019
-                            </li>
-                            <li class="block col-20">
-                                <button>Save Up To 15%</button>
-                            </li>
-                        </ul>
-                        <div class="load-more">
-                            <a href="#" id="load-more-options">Load More</a>
+                    <div class="search-content" id="#Flights">
+                        <h2>Search for Flights</h2>
+                        <div class="trip-nav">
+                            <ul>
+                                <li class="selected">
+                                    <a href="#">Round Trip</a>
+                                </li>
+                                <li>
+                                    <a href="#">One Way</a>
+                                </li>
+                                <li>
+                                    <a href="#">Multiple Destination</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="last-highlight load-more">
-                            <button aria-labelledby="lastHighlightDescription">
-                                <img src="./assets/last-highlight.jpg" role="presentation">
-                                <span id="lastHighlightDescription">Search for great value car rentals anywhere in the world.</span>
-                            </button>
+                        <div class="trip-content">
+                            <form class="block-group" role="form" id="flightItinerarySearch" data-type="Air" method="post">
+                                <div class="trip-section-row">
+                                    <div class="trip-section-column">
+                                        <label for="departure-city">Departure City</label>
+                                        <input type="text" name="departure-city" value="" placeholder="Airport or City">
+                                    </div>
+                                    <div class="trip-section-column">
+                                        <label for="departure-city">Destination City</label>
+                                        <input type="text" name="destination-city" value="" placeholder="Airport or City">
+                                    </div>
+                                    <div class="trip-section-column">
+                                        <label for="departure-city">Departure Date</label>
+                                        <input type="date" name="departure-date" value="" placeholder="MM/DD/YY">
+                                    </div>
+                                    <div class="trip-section-column">
+                                        <label for="departure-city">Return Date</label>
+                                        <input type="date" name="return-date" value="" placeholder="MM/DD/YY">
+                                    </div>
+                                </div>
+                                <div class="trip-section-row">
+                                    <div class="trip-section-column">
+                                        <label for="departure-city">Adults (18+)</label>
+                                        <input type="number" name="adults" value="0">
+                                        <a href="#">Age Information</a>
+                                    </div>
+                                    <div class="trip-section-column">
+                                        <label for="departure-city">Youths (12-17)</label>
+                                        <input type="number" name="youths" value="0">
+                                    </div>
+                                    <div class="trip-section-column">
+                                        <label for="departure-city">Childrens (0-11)</label>
+                                        <input type="number" name="children" value="0">
+                                    </div>
+                                </div>
+                                <div class="trip-section-row">
+                                    <label for=""></label>
+                                    <a href="#" class="more-Information">More Information ++</a>
+                                </div>
+                            </form>
                         </div>
-
-
                     </div>
                 </div>
             </div>
-        </div> -->
-
-        <!-- <footer class="footer">
-            <div role="navigation" aria-label="Main Navigation List" class="footer-navigation-links-left">
-                <h3>Main Navigation</h3>
-                <ul class="footer-main-nav-ul" data-targetarea="parent">
-                    <li>
-                        <a href="#Flight" class="js-footer-nav" data-target="title_1">
-                            Flights
+        </div>
+        <div class="grid-main-content">
+            <div class="main-layout">
+                <div class="grid-box">
+                    <div class="grid-section">
+                        <a href="#">
+                            <img src="images/grid1.jpg" alt="Grid 1">
                         </a>
-                    </li>
-                    <li>
-                        <a href="#Hotel" class="js-footer-nav" data-target="title_2">
-                            Hotels
+                    </div>
+                    <div class="grid-section">
+                        <a href="#">
+                            <img src="images/grid2.jpg" alt="Grid 2">
                         </a>
-                    </li>
-                    <li>
-                        <a href="#Car" class="js-footer-nav" data-target="title_3">Cars</a>
-                    </li>
-                    <li>
-                        <a href="#Activity" class="js-footer-nav" data-target="title_4">Activities</a>
-                    </li>
-                    <li>
-                        <a href="#" class="js-footer-nav" data-target="title_5">
-                            Cruises
+                    </div>
+                    <div class="grid-section">
+                        <a href="#">
+                            <img src="images/grid3.jpg" alt="Grid 3">
                         </a>
-                    </li>
-                    <li>
-                        <a href="#Deals" class="js-footer-nav" data-target="title_6">
-                            Deals
-                        </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
-            <div role="navigation" aria-label="Other Links List" class="footer-other-links">
-                <h3>Other Links</h3>
+        </div>
+        <div class="deal-finder main-layout">
+            <h3>Deal Finder</h3>
+            <div class="search-box">
+                <input type="search" name="" value="" placeholder="Find offer by destination or name" class="search-text">
+                <button type="button" name="button">SEARCH</button>
+                <h3>Find results</h3>
+                <div class="search-category">
+                    <button class="js-dealsfinder-filter tb active" data-option="hotel" role="checkbox" aria-checked="true" aria-describedby="deal-finder-descriptionflight">
+                        <svg viewBox="0 0 100 100" id="icon-hotel" width="100%" height="100%">
+                            <title>Hotel</title>
+                            <path d="M79.146,39.433H35.757c0.047,0.52,0.083,1.044,0.083,1.578c0,10.14-8.446,18.385-18.828,18.385    	c-3.271,0-6.598,0.057-9.63,0.015v8.069h88.443V53.834C95.824,53.834,94.561,39.433,79.146,39.433z"></path>
+                            <ellipse cx="17.012" cy="41.01" rx="12.887" ry="12.444"></ellipse>
+                            <path d="M94.664,74.486c-0.821-0.915-1.996-1.505-3.319-1.505H11.859c-1.321,0-2.499,0.59-3.317,1.505    	C7.828,75,7.381,75.775,7.381,76.964v0.532v15.187c0,2.662,2.156,3.331,4.814,3.331c2.661,0,4.816-0.669,4.816-3.331V82.008h69.184    	v10.675c0,2.662,2.155,3.331,4.812,3.331c2.662,0,4.817-0.669,4.817-3.331V77.496v-0.532C95.824,75.775,95.378,75,94.664,74.486z"></path>
+                        </svg>Hotel
+                        <svg viewBox="0 0 100 100" id="icon-checkmark" width="100%" height="100%">
+                            <title>Checkmark</title>
+                            <polygon points="95.714,32.229 87.264,23.688 31.417,78.99 12.669,60.055 4.124,68.517 31.353,96.009 39.896,87.556 39.872,87.53 "></polygon>
+                        </svg>
+                </button>
+                <button class="js-dealsfinder-filter tb" data-option="car" role="checkbox" aria-checked="false" aria-describedby="deal-finder-descriptionflight">
+                    <svg viewBox="0 0 100 100" id="icon-car" width="100%" height="100%">
+                        <title>Car</title>
+                        <path d="M85.867,55.738h-0.517l-7.056-17.643c-3.249-7.082-4.459-13.048-9.954-13.048h-2.37H33.978h-2.37	c-5.496,0-6.702,5.967-9.955,13.048l-7.055,17.643h-0.519c-5.497,0-9.954,4.455-9.954,9.956v6.001c0,4.567,3.073,8.412,7.262,9.586	c-0.058,0.38-0.086,0.773-0.086,1.17v5.58c0,4.404,3.572,7.977,7.975,7.977c4.405,0,7.975-3.572,7.975-7.977v-5.58	c0-0.271-0.014-0.535-0.04-0.798h45.53c-0.024,0.263-0.041,0.527-0.041,0.798v5.58c0,4.404,3.57,7.977,7.971,7.977	c4.406,0,7.977-3.572,7.977-7.977v-5.58c0-0.396-0.028-0.79-0.085-1.17c4.19-1.176,7.265-5.021,7.265-9.586v-6.001 C95.825,60.193,91.368,55.738,85.867,55.738z M87.07,68.696c0,2.977-2.412,5.39-5.391,5.39c-2.954,0-5.347-2.37-5.387-5.31	c0-0.026-0.005-0.053-0.005-0.08c0-2.979,2.411-5.395,5.392-5.395c0.376,0,0.738,0.038,1.092,0.109	C86.063,63.918,87.907,66.091,87.907,68.696z M26.852,52.117l3.855-10.832c2.216-4.406,3.038-8.118,6.785-8.118h1.611h21.798h1.615	c3.745,0,4.567,3.712,6.782,8.118l3.855,10.832c0,2.496-0.631,3.353-1.837,3.621c-0.96,0.213-2.284,0.057-3.946,0.057h-6.47H39.103	h-6.467c-1.663,0-2.987,0.156-3.949-0.057C27.484,55.47,26.852,54.613,26.852,52.117z M16.341,63.411	c0.352-0.071,0.716-0.109,1.09-0.109c2.979,0,5.391,2.415,5.391,5.395c0,0.027-0.002,0.054-0.004,0.08	c-0.041,2.939-2.437,5.31-5.387,5.31c-2.979,0-5.392-2.413-5.392-5.39C12.039,66.091,13.884,63.918,16.341,63.411z"></path>
+                    </svg>Car<svg viewBox="0 0 100 100" id="icon-square" width="100%" height="100%"><title>square</title> <rect x="4.125" y="4.076" width="91.785" height="91.95"></rect> </svg>
+                </button>
+                <button class="js-dealsfinder-filter tb" data-option="cruise" role="checkbox" aria-checked="false" aria-describedby="deal-finder-descriptionflight">
+                    <svg viewBox="0 0 100 100" id="icon-cruise" width="100%" height="100%">
+                        <title>Cruise</title>
+                        <path d="M77.929,85.397c-3.848,1.908-7.639,1.768-11.362-0.046c-3.522-1.718-7.001-1.911-10.507-0.248	c-4.399,2.087-8.665,2.091-13.075-0.042c-2.989-1.446-6.182-1.688-9.262-0.139c-4.481,2.25-8.859,2.439-13.439,0.093	c-2.897-1.491-6.061-1.866-9.265-0.509c-2.209,0.935-4.49,1.722-6.895,2.631c0,2.553,0,5.411,0,8.8	c1.974-0.522,3.883-0.678,5.412-1.497c3.795-2.032,7.42-2.109,11.265-0.201c4.038,1.998,8.183,2.063,12.197-0.135 c3.249-1.777,6.498-1.872,9.807-0.252c4.57,2.238,9.115,2.306,13.715,0.038c3.201-1.576,6.442-1.596,9.614,0.147 c4.192,2.303,8.389,2.128,12.593,0.059c3.601-1.772,7.066-1.65,10.66,0.223c1.664,0.869,3.687,1.096,5.804,1.689 c0-3.491,0-6.351,0-9.127c-1.726-0.46-3.579-0.557-4.949-1.388C86.074,82.977,81.995,83.378,77.929,85.397z"></path>
+                        <path d="M16.682,32.273l7.74-2.824v-4.347c0-0.355,0.701-1.008,1.845-1.008h7.417v-6.267c0-0.355,0.701-1.009,1.845-1.009H63.78	c1.146,0,1.846,0.654,1.846,1.009v6.267h7.42c1.143,0,1.846,0.653,1.846,1.008v4.347l7.739,2.824c0,0,0.385,0.024,0.922,0.169	c0.905,0.239,2.24,0.823,2.865,2.207c-0.625-1.383-1.96-1.967-2.865-2.207v-7.34c0-5.045-4.22-9.2-9.583-9.634c-1.146-4.196-5.279-7.312-10.189-7.312h-8.298V4.17H43.545v3.986h-8.017c-4.908,0-9.045,3.115-10.191,7.312c-5.36,0.435-9.579,4.59-9.579,9.634v7.34c0.001-0.004,0.001-0.004,0.001-0.004C16.298,32.297,16.682,32.273,16.682,32.273z"></path>
+                        <path d="M33.723,68.271c3.08-1.547,6.272-1.306,9.262,0.141c2.131,1.031,4.226,1.561,6.323,1.603c1.992,0.033,3.977-0.37,5.99-1.218	V29.966l24.638,8.995c-0.318,0.689-0.854,1.647-1.737,2.913l-0.286,0.414l-0.214,0.457l-3.904,8.27l-0.338,0.713l-0.538,1.143	l-0.031,1.265L72.49,70.113c1.799-0.023,3.614-0.462,5.438-1.367c0.197-0.097,0.397-0.187,0.595-0.276	c0.106-0.051,0.212-0.097,0.321-0.146l0.365-14.756l0,0l3.902-8.269c1.813-2.599,2.748-4.631,3.117-6.216	c0-0.004,0-0.004,0.002-0.004c0.051-0.145,0.099-0.288,0.143-0.426c0-0.006,0.004-0.014,0.004-0.02	c0.179-0.569,0.288-1.088,0.347-1.562l0,0c0.027-0.25,0.042-0.488,0.04-0.712c-0.002-0.563-0.093-1.048-0.248-1.467	c-0.029-0.084-0.064-0.165-0.099-0.244c-0.625-1.383-1.96-1.967-2.865-2.207c-0.537-0.145-0.922-0.169-0.922-0.169l-7.739-2.824	l-25.234-9.213h-0.001l-25.234,9.213l-7.74,2.824c0,0-0.384,0.024-0.922,0.165c0,0,0,0-0.001,0.004c-0.003,0-0.003,0-0.003,0	c-0.12,0.032-0.251,0.069-0.384,0.118c-0.008,0-0.014,0.002-0.019,0.004c-0.067,0.023-0.132,0.047-0.201,0.073c-0.004,0.002-0.009,0.004-0.015,0.004c-0.064,0.027-0.127,0.055-0.195,0.084c-0.004,0.002-0.013,0.005-0.017,0.008	c-0.067,0.029-0.136,0.059-0.203,0.094c-0.01,0.004-0.022,0.011-0.032,0.017c-0.067,0.034-0.132,0.069-0.2,0.105	c0,0.002-0.003,0.003-0.006,0.003c-0.066,0.038-0.13,0.078-0.197,0.121c-0.012,0.01-0.027,0.017-0.044,0.025 c-0.061,0.043-0.126,0.088-0.189,0.133c-0.008,0.005-0.013,0.011-0.022,0.016c-0.058,0.044-0.114,0.088-0.169,0.137	c-0.017,0.009-0.028,0.021-0.04,0.033c-0.06,0.051-0.12,0.103-0.176,0.16c-0.013,0.011-0.025,0.023-0.038,0.036	c-0.048,0.053-0.099,0.103-0.146,0.158c-0.009,0.01-0.021,0.021-0.033,0.034c-0.055,0.061-0.101,0.126-0.151,0.191	c-0.013,0.018-0.027,0.037-0.04,0.053c-0.048,0.065-0.094,0.133-0.136,0.203c-0.004,0.008-0.011,0.017-0.017,0.025	c-0.039,0.071-0.082,0.145-0.12,0.22c-0.014,0.021-0.023,0.042-0.034,0.065c-0.038,0.078-0.073,0.158-0.107,0.246	c-0.008,0.018-0.015,0.036-0.02,0.052c-0.03,0.076-0.056,0.153-0.079,0.231c-0.008,0.025-0.015,0.046-0.022,0.069	c-0.025,0.091-0.047,0.188-0.07,0.286c-0.005,0.025-0.008,0.051-0.013,0.078c-0.017,0.088-0.03,0.18-0.044,0.275	c0,0.017-0.004,0.036-0.006,0.055c-0.011,0.106-0.019,0.218-0.021,0.33c-0.002,0.032-0.002,0.065-0.004,0.095 c-0.002,0.117-0.002,0.235,0.005,0.36c0,0.013,0.001,0.027,0.001,0.042c0.006,0.116,0.017,0.232,0.029,0.354 0.004,0.035,0.01,0.067,0.013,0.1c0.017,0.132,0.035,0.268,0.063,0.406c0.004,0.03,0.011,0.06,0.017,0.089	c0.023,0.124,0.052,0.25,0.083,0.382c0.007,0.029,0.015,0.061,0.024,0.092c0.036,0.149,0.08,0.302,0.127,0.46 c0.014,0.038,0.024,0.077,0.039,0.115c0.046,0.149,0.1,0.305,0.156,0.462c0.006,0.016,0.01,0.032,0.017,0.048 c0.063,0.172,0.132,0.346,0.21,0.525c0.016,0.042,0.035,0.086,0.055,0.13c0.078,0.181,0.157,0.363,0.248,0.553c0.01,0.024,0.023,0.048,0.037,0.072c0.081,0.174,0.172,0.353,0.266,0.537c0.022,0.041,0.044,0.086,0.067,0.129 c0.107,0.201,0.216,0.403,0.333,0.613c0.024,0.042,0.049,0.085,0.076,0.126c0.109,0.193,0.227,0.388,0.345,0.587	c0.024,0.034,0.041,0.067,0.063,0.1c0.138,0.221,0.282,0.449,0.432,0.681c0.035,0.051,0.069,0.105,0.105,0.157	c0.159,0.238,0.32,0.482,0.495,0.733l4.238,8.979l0.38,15.342C24.982,70.701,29.3,70.493,33.723,68.271z"></path>
+                        <path d="M90.241,68.843c-3.853-2.328-7.633-2.155-11.396-0.519c-0.109,0.049-0.215,0.095-0.321,0.146	c-0.197,0.09-0.397,0.18-0.595,0.276c-1.824,0.905-3.64,1.344-5.438,1.367c-1.992,0.022-3.966-0.46-5.924-1.411	c-3.522-1.719-7.001-1.91-10.507-0.243c-0.254,0.119-0.51,0.23-0.762,0.338c-2.013,0.848-3.998,1.251-5.99,1.218	c-2.097-0.042-4.192-0.571-6.323-1.603c-2.989-1.446-6.182-1.688-9.262-0.141c-4.423,2.222-8.741,2.43-13.254,0.183	c-0.061-0.031-0.12-0.057-0.185-0.086c-2.897-1.49-6.061-1.87-9.265-0.514c-2.209,0.938-4.49,1.721-6.895,2.632	c0,2.555,0,5.412,0,8.803c1.974-0.523,3.883-0.679,5.412-1.499c3.795-2.034,7.42-2.105,11.265-0.204	c4.038,2.005,8.183,2.062,12.197-0.132c3.249-1.774,6.498-1.873,9.807-0.252c4.57,2.239,9.115,2.305,13.715,0.038	c1.293-0.639,2.595-1.015,3.897-1.128c0.555-0.053,1.111-0.053,1.665,0c1.356,0.122,2.71,0.54,4.052,1.274	c4.192,2.305,8.389,2.129,12.593,0.059c3.601-1.771,7.066-1.646,10.66,0.225c1.664,0.867,3.687,1.098,5.804,1 688	c0-3.492,0-6.346,0-9.127C93.465,69.775,91.611,69.677,90.241,68.843z"></path>
+                    </svg>Cruise
+                    <svg viewBox="0 0 100 100" id="icon-square" width="100%" height="100%"><title>square</title> <rect x="4.125" y="4.076" width="91.785" height="91.95"></rect> </svg>
+                </button>
+                </div>
+            </div>
+            <div class="deal-finder-content">
+                <table cellspacing="0" cellspadding="0">
+                    <thead>
+                        <tr>
+                            <th>Destination</th>
+                            <th class="fixedColumnMedium">Name</th>
+                            <th>Valid Through</th>
+                            <th>Offer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Orlando, US</td>
+                            <td><a href="#">WorldQuest Orlando Resort</a></td>
+                            <td>Aug 10, 2018</td>
+                            <td>Save Up To 20%</td>
+                        </tr>
+                        <tr>
+                            <td>New York, US</td>
+                            <td><a href="#">Sheraton New York Times Square Hotel</a></td>
+                            <td>Aug 30, 2018</td>
+                            <td>Save Up To 25%</td>
+                        </tr>
+                        <tr>
+                            <td>New York City, US</td>
+                            <td><a href="#">Courtyard By Marriott New York Manhattan/Times Square</a></td>
+                            <td>Aug 30, 2018</td>
+                            <td>Save Up To 25%</td>
+                        </tr>
+                        <tr>
+                            <td>Puerto Vallarta, MX</td>
+                            <td><a href="#">The Westin Resort & Spa Puerto Vallarta</a></td>
+                            <td>Aug 30, 2018</td>
+                            <td>Save Up To 40%</td>
+                        </tr>
+                        <tr>
+                            <td>Washington, D.C. , US</td>
+                            <td><a href="#">The Dupont Circle Hotel</a></td>
+                            <td>Sep 08, 2018</td>
+                            <td>Save Up To 40%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5><a href="#">Load More</a></h5>
+            </div>
+            <div class="medium-banner main-layout">
+                <img src="images/banner1.jpg" alt="Las Vegas">
+                <div class="marketing-banner-content">
+                    <p class="textOverlay" id="BannerText70862150615flight">Play all day and all night! Great Las Vegas hotel deals. </p>
+                    <a href="#">View Offer</a>
+                </div>
+            </div>
+        </div>
+        <div class="site-navigation">
+            <div class="inner-navigation">
                 <ul>
-                    <li><button data-content="faq" type="button">Frequently Asked Questions</button></li>
-                    <li><button data-content="selleroftravel" type="button">Seller of Travel</button></li>
-                    <li><button data-content="websiteterms" type="button">Website Terms of Use</button></li>
-                    <li><button data-content="travelterms" type="button">Travel Terms &amp; Conditions</button></li>
-                    <li><button data-content="privacypolicy" type="button">Privacy Policy</button></li>
+                    <li>
+                        <a>Main Navigation</a>
+                    </li>
+                    <li>
+                        <a href="#">Flight</a>
+                    </li>
+                    <li>
+                        <a href="#">Hotels</a>
+                    </li>
+                    <li>
+                        <a href="#">Cars</a>
+                    </li>
+                    <li>
+                        <a href="#">Activities</a>
+                    </li>
+                    <li>
+                        <a href="#">Cruises</a>
+                    </li>
+                    <li>
+                        <a href="#">Deals</a>
+                    </li>
                 </ul>
             </div>
-        </footer> -->
+
+            <div class="inner-navigation">
+                <ul>
+                    <li>
+                        <a>Other Links</a>
+                    </li>
+                    <li>
+                        <a href="#">Frequently Asked Questions</a>
+                    </li>
+                    <li>
+                        <a href="#">Seller of Travel</a>
+                    </li>
+                    <li>
+                        <a href="#">Websites Terms of Use</a>
+                    </li>
+                    <li>
+                        <a href="#">Travel Terms and Conditions</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policies</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            © 2018 Connexions Loyalty, Inc.
+        </footer>
     </div>
     <script type="text/javascript" src="./script.js"></script>
 </body>
